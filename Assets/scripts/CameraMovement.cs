@@ -12,6 +12,12 @@ public class CameraMovement : MonoBehaviour
     float xRotation;
     float yRotation;
 
+    [Header("Field of view")]
+    [SerializeField] Camera kamera;
+    [SerializeField] bool dynamicFov;
+
+
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -29,7 +35,21 @@ public class CameraMovement : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-        orientation.rotation = Quaternion.Euler(0, yRotation, 0); 
+        orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+        DynamicFov();
+    }
+
+    void DynamicFov()
+    {
+        if(Input.GetKey(KeyCode.LeftShift)&& dynamicFov == true)
+        {
+            kamera.fieldOfView = Mathf.Lerp(kamera.fieldOfView,100,10f*Time.deltaTime);
+        }
+        else
+        {
+            kamera.fieldOfView = Mathf.Lerp(kamera.fieldOfView, 80, 10f * Time.deltaTime);
+        }
+         
     }
 
 }

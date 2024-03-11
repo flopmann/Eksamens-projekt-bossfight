@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed;
+    public float sprintSpeed;
 
     public float groundDrag;
 
@@ -13,9 +14,11 @@ public class Movement : MonoBehaviour
     public float jumpCooldown;
     public float airMultiplier;
     bool readyToJump;
+    bool sprint;
 
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
+    public KeyCode sprintKey = KeyCode.LeftShift;
 
     [Header("Ground Check")]
     public float playerheight;
@@ -31,11 +34,14 @@ public class Movement : MonoBehaviour
 
     Rigidbody rb;
 
+    
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         readyToJump = true;
+        sprint = false;
     }
 
     private void Update()
@@ -49,11 +55,17 @@ public class Movement : MonoBehaviour
         else
             rb.drag = 0;
         SpeedControl();
+
+        if (!Input.GetKey(sprintKey))
+        {
+            sprint = false;
+        }
     }
 
     private void FixedUpdate()
     {
         MovePlayer();
+
     }
 
     private void MyInput()
@@ -70,6 +82,13 @@ public class Movement : MonoBehaviour
             Invoke(nameof(resetJump), jumpCooldown);
         }
 
+        if (Input.GetKey(sprintKey))
+        {
+            sprint = true;
+        }
+
+        
+
     }
 
     private void MovePlayer()
@@ -78,7 +97,17 @@ public class Movement : MonoBehaviour
 
 
         if (grounded)
-        rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+        {
+            if (sprint == false)
+            {
+                rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+            }
+            else
+            {
+                rb.AddForce(moveDirection.normalized * sprintSpeed * 10f, ForceMode.Force);
+            }
+        }
+        
 
         else if (!grounded)
         {
@@ -91,10 +120,21 @@ public class Movement : MonoBehaviour
     {
         Vector3 flatVel = new Vector3(rb.velocity.x,0f, rb.velocity.z);
 
-        if (flatVel.magnitude > moveSpeed)
+        if (sprint == false)
         {
-            Vector3 limitedVel = flatVel.normalized * moveSpeed;
-            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+            if (flatVel.magnitude > moveSpeed)
+            {
+                Vector3 limitedVel = flatVel.normalized * moveSpeed;
+                rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+            }
+        }
+        else
+        {
+            if (flatVel.magnitude > sprintSpeed)
+            {
+                Vector3 limitedVel = flatVel.normalized * sprintSpeed;
+                rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+            }
         }
     }
     private void Jump()
