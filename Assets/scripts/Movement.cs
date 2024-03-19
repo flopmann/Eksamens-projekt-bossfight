@@ -104,7 +104,7 @@ public class Movement : MonoBehaviour
             }
             else
             {
-                rb.AddForce(moveDirection.normalized * sprintSpeed * 10f, ForceMode.Force);
+                rb.AddForce(moveDirection.normalized * 7f, ForceMode.Force);
             }
         }
         
