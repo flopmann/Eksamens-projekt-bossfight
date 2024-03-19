@@ -112,7 +112,7 @@ public class Movement : MonoBehaviour
         else if (!grounded)
         {
                
-                rb.AddForce(moveDirection.normalized * moveSpeed * 7f * airMultiplier , ForceMode.Force);           
+                rb.AddForce(moveDirection.normalized * moveSpeed * 8f * airMultiplier , ForceMode.Force);           
 
         }
     }
