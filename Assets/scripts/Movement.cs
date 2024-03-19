@@ -27,7 +27,7 @@ public class Movement : MonoBehaviour
 
     public Transform orientation;
 
-    float horixontalInput;
+    float horizontalInput;
     float verticalInput;
 
     Vector3 moveDirection;
@@ -70,7 +70,7 @@ public class Movement : MonoBehaviour
 
     private void MyInput()
     {
-        horixontalInput = Input.GetAxisRaw("Horizontal");
+        horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
         if(Input.GetKey(jumpKey) && readyToJump && grounded)
@@ -93,7 +93,7 @@ public class Movement : MonoBehaviour
 
     private void MovePlayer()
     {
-        moveDirection = orientation.forward * verticalInput + orientation.right * horixontalInput;
+        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
 
         if (grounded)
@@ -111,7 +111,8 @@ public class Movement : MonoBehaviour
 
         else if (!grounded)
         {
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+               
+                rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier , ForceMode.Force);           
 
         }
     }

@@ -820,7 +820,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
-  orientation: {fileID: 0}
+  orientation: {fileID: 933049228}
 --- !u!136 &249031146
 CapsuleCollider:
   m_ObjectHideFlags: 0
