@@ -12,6 +12,8 @@ public class CameraMovement : MonoBehaviour
     float xRotation;
     float yRotation;
 
+    
+
     [Header("Field of view")]
     [SerializeField] Camera kamera;
     [SerializeField] bool dynamicFov;

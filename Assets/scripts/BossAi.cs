@@ -7,7 +7,10 @@ public class BossAi : MonoBehaviour
 {
     private BossState Currentstate = BossState.Idle;
 
-    public LayerMask player, whatIsGround;
+    public Transform Target;
+    public float meleeRange = 10;
+    public float timeTillStart = 10f;
+    public float timeTillChase = 3f;
 
     public enum BossState
     {
@@ -15,29 +18,24 @@ public class BossAi : MonoBehaviour
         Idle, 
         Meleeattacking, 
         Rangedattacking,
-        Patroling,
     }
     void Start()
     {
-        Currentstate = BossState.Patroling;
-
-
+        Currentstate = BossState.Idle;
+      
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
+        transform.forward = Target.transform.position;
         switch (Currentstate)
         {
             case BossState.Idle:
                  idleState();
-                 break;
-
-            case BossState.Patroling:
-                 patrolingState();
-                 break;
+                break;
             case BossState.Moving:
-                 movingState(); 
+                 moving(); 
                  break;
             case BossState.Meleeattacking:
                  meleeAttacking();
@@ -50,28 +48,34 @@ public class BossAi : MonoBehaviour
 
     void idleState()
     {
-
-    }
-    void patrolingState()
-    {
-        Collider[] VisionRange = Physics.OverlapSphere(transform.position, 5f);
-        foreach (Collider collider in VisionRange)
+        timeTillStart -= Time.deltaTime;
+        if (timeTillStart <= 0f)
         {
-            if(collider.tag == "PLayer")
-            {
-                transform.forward = GameObject.FindGameObjectWithTag("Player").transform.position;
-            }
+            Currentstate = BossState.Moving;
         }
-
-
     }
-    void movingState()
+    
+    void moving()
     {
-
+        Debug.Log(Currentstate);
+        GetComponent<AIMove>().moveAi();
+        timeTillChase = 3f;
+        if ((Target.transform.position - transform.position).magnitude <= meleeRange)
+        {
+            Currentstate = BossState.Meleeattacking;
+        }
     }
     void meleeAttacking()
     {
-
+        Debug.Log("attacking");
+        if ((Target.transform.position-transform.position).magnitude >= meleeRange) 
+        {
+            timeTillChase -= Time.deltaTime;
+            if(timeTillChase <= 0f)
+            {
+                Currentstate = BossState.Moving;
+            }
+        }
     }
     void rangedAttacking()
     {
