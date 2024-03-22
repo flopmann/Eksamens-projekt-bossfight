@@ -7,23 +7,24 @@ public class BossAi : MonoBehaviour
 {
     private BossState Currentstate = BossState.Idle;
 
-    public Transform Target; 
+    public Transform Target;
+    public float meleeRange = 10;
+    public float timeTillStart = 10f; 
+
     public enum BossState
     {
         Moving,
         Idle, 
         Meleeattacking, 
         Rangedattacking,
-        Patroling,
     }
     void Start()
     {
-        Currentstate = BossState.Patroling;
-        
-
+        Currentstate = BossState.Idle;
+      
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         transform.forward = Target.transform.position;
@@ -31,13 +32,9 @@ public class BossAi : MonoBehaviour
         {
             case BossState.Idle:
                  idleState();
-                 break;
-
-            case BossState.Patroling:
-                 patrolingState();
-                 break;
+                break;
             case BossState.Moving:
-                 movingState(); 
+                 moving(); 
                  break;
             case BossState.Meleeattacking:
                  meleeAttacking();
@@ -50,15 +47,21 @@ public class BossAi : MonoBehaviour
 
     void idleState()
     {
-
+        timeTillStart -= Time.deltaTime;
+        if (timeTillStart <= 0f)
+        {
+            Currentstate = BossState.Moving;
+        }
     }
-    void patrolingState()
+    
+    void moving()
     {
-        
-    }
-    void movingState()
-    {
-        
+        Debug.Log(Currentstate);
+        GetComponent<AIMove>().moveAi();
+        if ((Target.transform.position - transform.position).magnitude >= meleeRange)
+        {
+            Currentstate = BossState.Meleeattacking;
+        }
     }
     void meleeAttacking()
     {
