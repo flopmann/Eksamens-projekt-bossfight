@@ -7,8 +7,7 @@ public class BossAi : MonoBehaviour
 {
     private BossState Currentstate = BossState.Idle;
 
-    public LayerMask player, whatIsGround;
-
+    public Transform Target; 
     public enum BossState
     {
         Moving,
@@ -20,13 +19,14 @@ public class BossAi : MonoBehaviour
     void Start()
     {
         Currentstate = BossState.Patroling;
-
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        transform.forward = Target.transform.position;
         switch (Currentstate)
         {
             case BossState.Idle:
@@ -54,20 +54,11 @@ public class BossAi : MonoBehaviour
     }
     void patrolingState()
     {
-        Collider[] VisionRange = Physics.OverlapSphere(transform.position, 5f);
-        foreach (Collider collider in VisionRange)
-        {
-            if(collider.tag == "PLayer")
-            {
-                transform.forward = GameObject.FindGameObjectWithTag("Player").transform.position;
-            }
-        }
-
-
+        
     }
     void movingState()
     {
-
+        
     }
     void meleeAttacking()
     {
