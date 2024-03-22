@@ -46,6 +46,7 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
+        
         MyInput();
         grounded = Physics.Raycast(transform.position, Vector3.down, playerheight * 0.5f + 0.2f, whatIsGround);
 
@@ -60,6 +61,7 @@ public class Movement : MonoBehaviour
         {
             sprint = false;
         }
+
     }
 
     private void FixedUpdate()
@@ -94,6 +96,7 @@ public class Movement : MonoBehaviour
     private void MovePlayer()
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        moveDirection.y = 0;
 
 
         if (grounded)
