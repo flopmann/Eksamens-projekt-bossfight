@@ -5,7 +5,7 @@ using UnityEngine;
 public class AIMove : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5;
-    private CharacterController controller;
+    //private CharacterController controller;
     public Animator animator;
     private Vector3 Target;
     public Transform Player;
@@ -13,7 +13,7 @@ public class AIMove : MonoBehaviour
     private float currentSpeed = 0f;
     void Start()
     {
-        controller = GetComponent<CharacterController>();
+        //controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
 
     }
@@ -21,14 +21,14 @@ public class AIMove : MonoBehaviour
     
     void Update()
     {
-        moveAi();
+        
     }
 
    public void moveAi()
     {
         Target = Player.position;
-
-        float distance = (Target -transform.position).magnitude;
+        Debug.Log("Trying to move");
+        
 
         currentSpeed = moveSpeed;
 
