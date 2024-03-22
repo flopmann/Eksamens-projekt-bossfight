@@ -94,7 +94,7 @@ public class Movement : MonoBehaviour
     private void MovePlayer()
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-
+        moveDirection.y = 0;
 
         if (grounded)
         {
