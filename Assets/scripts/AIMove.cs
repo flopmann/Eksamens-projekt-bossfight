@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class AIMove : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5;
-    //private CharacterController controller;
-    public Animator animator;
+    [SerializeField] private float moveSpeed = 5;    
     private Vector3 Target;
     public Transform Player;
-
-    private float currentSpeed = 0f;
+    private float currentSpeed;
     void Start()
-    {
-        //controller = GetComponent<CharacterController>();
-        animator = GetComponent<Animator>();
+    {   
+        
 
     }
 
