@@ -25,6 +25,7 @@ public class BossAi : MonoBehaviour
     {
         Currentstate = BossState.Idle;
         animator = GetComponent<Animator>();
+        transform.forward = Target.position;
     }
 
    
@@ -70,7 +71,7 @@ public class BossAi : MonoBehaviour
     }
     void meleeAttacking()
     {
-        transform.forward = GetComponent<MeleeAttack>().attackPoint.position;
+        
         if ((Target.transform.position-transform.position).magnitude >= meleeRange) 
         {
             timeTillChase -= Time.deltaTime;
