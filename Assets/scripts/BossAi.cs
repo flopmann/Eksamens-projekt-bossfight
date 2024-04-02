@@ -9,7 +9,10 @@ public class BossAi : MonoBehaviour
 
     public Transform Target;
     public float meleeRange = 10;
-    public float timeTillStart = 10f; 
+    public float timeTillStart = 10f;
+    public float timeTillChase = 3f;
+    public Animator animator;
+    public float timeTillAttack = 2f;
 
     public enum BossState
     {
@@ -21,7 +24,7 @@ public class BossAi : MonoBehaviour
     void Start()
     {
         Currentstate = BossState.Idle;
-      
+        animator = GetComponent<Animator>();
     }
 
    
@@ -58,14 +61,33 @@ public class BossAi : MonoBehaviour
     {
         Debug.Log(Currentstate);
         GetComponent<AIMove>().moveAi();
-        if ((Target.transform.position - transform.position).magnitude >= meleeRange)
+        timeTillChase = 3f;
+        timeTillAttack = 3f;
+        if ((Target.transform.position - transform.position).magnitude <= meleeRange)
         {
             Currentstate = BossState.Meleeattacking;
         }
     }
     void meleeAttacking()
     {
+        
+        if ((Target.transform.position-transform.position).magnitude >= meleeRange) 
+        {
+            timeTillChase -= Time.deltaTime;
+            if(timeTillChase <= 0f)
+            {
+                Currentstate = BossState.Moving;
+            }
+        }
+        timeTillAttack -= Time.deltaTime;
 
+        if (timeTillAttack <= 0f)
+        {
+            GetComponent<MeleeAttack>().meleeAttack();
+            timeTillAttack = 3f;
+            
+        }
+       
     }
     void rangedAttacking()
     {
