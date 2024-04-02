@@ -30,7 +30,7 @@ public class BossAi : MonoBehaviour
    
     void Update()
     {
-        transform.forward = Target.transform.position;
+        
         switch (Currentstate)
         {
             case BossState.Idle:
@@ -70,7 +70,7 @@ public class BossAi : MonoBehaviour
     }
     void meleeAttacking()
     {
-        
+        transform.forward = GetComponent<MeleeAttack>().attackPoint.position;
         if ((Target.transform.position-transform.position).magnitude >= meleeRange) 
         {
             timeTillChase -= Time.deltaTime;

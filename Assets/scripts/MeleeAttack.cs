@@ -10,7 +10,7 @@ public class MeleeAttack : MonoBehaviour
     public float attackCooldown;
     public float attackDamage;
     public Transform attackPoint;
-    private Vector3 Target;
+    
     public Transform attackTarget;
     
 
@@ -28,22 +28,14 @@ public class MeleeAttack : MonoBehaviour
 
     public void meleeAttack()
     {
-        Target = attackTarget.position;
+        
         readyToAttack = false;
         Debug.Log("attacking");
         GameObject currentHitBox = Instantiate(meleeHitBox, attackPoint.position, Quaternion.identity);
+        currentHitBox.GetComponent<attackMovement>().attackTarget = attackTarget;
+    }   
 
-        Vector3 hitBoxMovement = Vector3.MoveTowards(currentHitBox.transform.position, Target, attackSpeed * Time.deltaTime);
-        currentHitBox.transform.position = hitBoxMovement;
-
-    }
-
-    public void hitBoxMovement()
-    {
-        
-
-        
-    }
+    
    
 
 }

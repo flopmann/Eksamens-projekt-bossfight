@@ -8,17 +8,7 @@ public class AIMove : MonoBehaviour
     private Vector3 Target;
     public Transform Player;
     private float currentSpeed;
-    void Start()
-    {   
         
-
-    }
-
-    
-    void Update()
-    {
-        
-    }
 
    public void moveAi()
     {
