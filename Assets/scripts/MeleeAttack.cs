@@ -1,38 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class MeleeAttack : MonoBehaviour
 {
     public GameObject meleeHitBox;
-    public float attackSpeed = 5f;
-    public float attackTime;
-    public float attackCooldown;
-    public float attackDamage;
+    public GameObject Target;
+    private GameObject currentTarget;
+
     public Transform attackPoint;
-    
     public Transform attackTarget;
-    
 
 
-    public bool readyToAttack;
-    void Start()
-    {
-        readyToAttack = true;
-    }
     
-    void Update()
+
+    
+
+    public void spawnTarget()
     {
-        
+
+        currentTarget = Instantiate(Target, attackTarget.position, Quaternion.identity);
+
     }
 
     public void meleeAttack()
     {
         
-        readyToAttack = false;
+        
         Debug.Log("attacking");
         GameObject currentHitBox = Instantiate(meleeHitBox, attackPoint.position, Quaternion.identity);
-        currentHitBox.GetComponent<attackMovement>().attackTarget = attackTarget;
+        currentHitBox.GetComponent<attackMovement>().attackTarget = currentTarget.transform;
     }   
 
     
