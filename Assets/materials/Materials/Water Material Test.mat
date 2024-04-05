@@ -107,11 +107,13 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
+    - _EmissionDimming: 0
+    - _EmissionStrength: -0.01
     - _EnvironmentReflections: 1
     - _FlowSpeed: 0.28
-    - _FoamDensity: 5
-    - _FoamSpeed: 1.14
-    - _FoamThickness: 2.69
+    - _FoamDensity: 1.93
+    - _FoamSpeed: 1.92
+    - _FoamThickness: 2.66
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -121,7 +123,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Scale: 0.94
+    - _Scale: 1.26
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -135,7 +137,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlowDirection: {r: 0, g: -1, b: 0, a: 0}
-    - _FoamColor: {r: 0.5424528, g: 0.8269802, b: 1, a: 0}
+    - _FoamColor: {r: 1, g: 1, b: 1, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _WaterColor: {r: 0.11974903, g: 0.35107565, b: 0.6509434, a: 1}
+    - _WaterColor: {r: 0, g: 0.47091198, b: 1, a: 1}
   m_BuildTextureStacks: []
