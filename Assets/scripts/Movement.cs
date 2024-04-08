@@ -34,7 +34,7 @@ public class Movement : MonoBehaviour
 
     Rigidbody rb;
 
-    
+    public GameObject Camera;
 
     private void Start()
     {
@@ -60,6 +60,10 @@ public class Movement : MonoBehaviour
         {
             sprint = false;
         }
+
+        transform.rotation = Camera.transform.rotation;
+
+
     }
 
     private void FixedUpdate()

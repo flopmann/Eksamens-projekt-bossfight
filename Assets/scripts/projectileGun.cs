@@ -26,6 +26,7 @@ public class projectileGun : MonoBehaviour
     public GameObject muzzleFlash;
     public TextMeshProUGUI ammunitionDisplay;
 
+    public Transform Player;
 
     private void Awake()
     {
@@ -39,6 +40,7 @@ public class projectileGun : MonoBehaviour
 
         if (ammunitionDisplay != null)
             ammunitionDisplay.SetText(bulletsLeft / bulletsPerTap + " / " + magazineSize / bulletsPerTap);
+        transform.rotation = Player.transform.rotation;
     }
 
     private void MyInput()
