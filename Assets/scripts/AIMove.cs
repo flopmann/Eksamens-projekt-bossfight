@@ -4,29 +4,34 @@ using UnityEngine;
 
 public class AIMove : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5;
-    //private CharacterController controller;
-    public Animator animator;
+    [SerializeField] private float moveSpeed = 5;    
     private Vector3 Target;
     public Transform Player;
-
-    private float currentSpeed = 0f;
-    void Start()
-    {
-        //controller = GetComponent<CharacterController>();
-        animator = GetComponent<Animator>();
-
-    }
-
+    public float currentSpeed;
     
+    public Transform target;
+
+
+    public float speed = 1.0f;
+
     void Update()
     {
+        Vector3 targetDirection = target.position - transform.position; 
         
+        float singleStep = speed * Time.deltaTime;
+
+        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+
+        transform.rotation = Quaternion.LookRotation(newDirection);
     }
 
-   public void moveAi()
+
+  
+
+    public void moveAi()
     {
         Target = Player.position;
+        Target.y = transform.position.y;
         Debug.Log("Trying to move");
         
 
