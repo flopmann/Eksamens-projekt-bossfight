@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 21742973}
   - component: {fileID: 21742972}
   m_Layer: 3
-  m_Name: Catwalk 12 (2)
+  m_Name: Catwalk 24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 21742970}
   serializedVersion: 2
   m_LocalRotation: {x: -0.014126466, y: 0.9601239, z: 0.04935258, w: 0.2748216}
-  m_LocalPosition: {x: 78.19, y: 66.62, z: 55.26}
+  m_LocalPosition: {x: 77.56, y: 66.62, z: 54.87}
   m_LocalScale: {x: 10, y: 0.5, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -291,6 +291,7 @@ MonoBehaviour:
   allowInvoke: 1
   muzzleFlash: {fileID: 0}
   ammunitionDisplay: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!65 &40451346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -515,7 +516,7 @@ GameObject:
   - component: {fileID: 74848207}
   - component: {fileID: 74848206}
   m_Layer: 3
-  m_Name: Catwalk 10 (3)
+  m_Name: Catwalk 26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -621,7 +622,7 @@ GameObject:
   - component: {fileID: 87245171}
   - component: {fileID: 87245170}
   m_Layer: 3
-  m_Name: Catwalk 10 (7)
+  m_Name: Catwalk 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -714,112 +715,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87245168}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &115214289
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 115214290}
-  - component: {fileID: 115214293}
-  - component: {fileID: 115214292}
-  - component: {fileID: 115214291}
-  m_Layer: 3
-  m_Name: Catwalk 12 (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &115214290
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115214289}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.06766266, y: 0.5867416, z: 0.049290713, w: 0.8054356}
-  m_LocalPosition: {x: -42.954952, y: 69.459595, z: 96.576065}
-  m_LocalScale: {x: 10, y: 0.5, z: 10}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1594836261}
-  m_LocalEulerAnglesHint: {x: -9.604, y: 72.145, z: 0}
---- !u!64 &115214291
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115214289}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &115214292
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115214289}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 4249bb0f9dff7384d815f53f8b57d1d8, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &115214293
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115214289}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &147926471
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,7 +763,7 @@ GameObject:
   - component: {fileID: 161849300}
   - component: {fileID: 161849299}
   m_Layer: 3
-  m_Name: Catwalk 5
+  m_Name: Catwalk 49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1185,7 +1080,7 @@ GameObject:
   - component: {fileID: 190525522}
   - component: {fileID: 190525521}
   m_Layer: 3
-  m_Name: Catwalk 11 (5)
+  m_Name: Catwalk 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1199,13 +1094,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190525519}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.03948086, y: -0.4706582, z: -0.010509045, w: 0.88136923}
+  m_LocalRotation: {x: -0.035078146, y: -0.4710084, z: -0.018748874, w: 0.8812316}
   m_LocalPosition: {x: -53.02, y: 28.84, z: -77.67}
   m_LocalScale: {x: 10, y: 0.5, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1594836261}
-  m_LocalEulerAnglesHint: {x: -4.559, y: -56.248, z: 1.071}
+  m_LocalEulerAnglesHint: {x: -4.559, y: -56.248, z: 0}
 --- !u!64 &190525521
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1291,7 +1186,7 @@ GameObject:
   - component: {fileID: 193373142}
   - component: {fileID: 193373141}
   m_Layer: 3
-  m_Name: Catwalk 11 (1)
+  m_Name: Catwalk 33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1397,7 +1292,7 @@ GameObject:
   - component: {fileID: 223058412}
   - component: {fileID: 223058411}
   m_Layer: 3
-  m_Name: Catwalk 8 (11)
+  m_Name: Catwalk 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1411,13 +1306,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223058409}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.06713475, y: -0.52844447, z: -0.06853775, w: 0.8435295}
+  m_LocalRotation: {x: -0.07913451, y: -0.52678436, z: -0.049341243, w: 0.8448677}
   m_LocalPosition: {x: -38.35, y: 26.59, z: -86.68}
   m_LocalScale: {x: 10, y: 0.5, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1594836261}
-  m_LocalEulerAnglesHint: {x: -10.702, y: -63.888, z: -2.606}
+  m_LocalEulerAnglesHint: {x: -10.702, y: -63.888, z: 0}
 --- !u!64 &223058411
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1503,7 +1398,7 @@ GameObject:
   - component: {fileID: 247535799}
   - component: {fileID: 247535798}
   m_Layer: 3
-  m_Name: Catwalk 11 (4)
+  m_Name: Catwalk 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1669,6 +1564,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   orientation: {fileID: 933049228}
+  Camera: {fileID: 0}
 --- !u!136 &249031146
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1774,7 +1670,7 @@ GameObject:
   - component: {fileID: 250077893}
   - component: {fileID: 250077892}
   m_Layer: 3
-  m_Name: Catwalk 11 (6)
+  m_Name: Catwalk 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1788,13 +1684,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250077890}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.08572916, y: -0.6065313, z: -0.040678572, w: 0.7893766}
+  m_LocalRotation: {x: -0.073435366, y: -0.6081416, z: -0.056645796, w: 0.7883922}
   m_LocalPosition: {x: -20.94, y: 23.55, z: -91.95}
   m_LocalScale: {x: 10, y: 0.5, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1594836261}
-  m_LocalEulerAnglesHint: {x: -10.643, y: -75.291, z: 2.319}
+  m_LocalEulerAnglesHint: {x: -10.643, y: -75.291, z: 0}
 --- !u!64 &250077892
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1880,7 +1776,7 @@ GameObject:
   - component: {fileID: 256169945}
   - component: {fileID: 256169944}
   m_Layer: 3
-  m_Name: Catwalk 1
+  m_Name: Catwalk 54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1986,7 +1882,7 @@ GameObject:
   - component: {fileID: 294461187}
   - component: {fileID: 294461186}
   m_Layer: 3
-  m_Name: Catwalk 8 (2)
+  m_Name: Catwalk 39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2092,7 +1988,7 @@ GameObject:
   - component: {fileID: 300347616}
   - component: {fileID: 300347615}
   m_Layer: 3
-  m_Name: Catwalk 10 (6)
+  m_Name: Catwalk 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2106,13 +2002,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300347613}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.020192472, y: 0.15451857, z: -0.030579522, w: 0.9873101}
+  m_LocalRotation: {x: -0.0150259, y: 0.15510626, z: 0.0023594415, w: 0.98778075}
   m_LocalPosition: {x: -89.78, y: 40, z: 29.29}
   m_LocalScale: {x: 10, y: 0.5, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1594836261}
-  m_LocalEulerAnglesHint: {x: -1.743, y: 17.848, z: -3.822}
+  m_LocalEulerAnglesHint: {x: -1.743, y: 17.848, z: 0}
 --- !u!64 &300347615
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2417,7 +2313,7 @@ GameObject:
   - component: {fileID: 389225715}
   - component: {fileID: 389225714}
   m_Layer: 3
-  m_Name: Catwalk 9
+  m_Name: Catwalk 44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2558,7 +2454,7 @@ GameObject:
   - component: {fileID: 403521285}
   - component: {fileID: 403521284}
   m_Layer: 3
-  m_Name: Catwalk 8 (8)
+  m_Name: Catwalk 20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2572,13 +2468,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403521282}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.14064424, y: 0.78758, z: 0.15703917, w: 0.5790299}
+  m_LocalRotation: {x: -0.12347686, y: 0.7904516, z: 0.16960248, w: 0.57547796}
   m_LocalPosition: {x: 28.11, y: 57.34, z: 90.01}
   m_LocalScale: {x: 10, y: 0.5, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1594836261}
-  m_LocalEulerAnglesHint: {x: -24.22, y: 107.888, z: -2.493}
+  m_LocalEulerAnglesHint: {x: -24.22, y: 107.888, z: 0}
 --- !u!64 &403521284
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2664,7 +2560,7 @@ GameObject:
   - component: {fileID: 448536059}
   - component: {fileID: 448536058}
   m_Layer: 3
-  m_Name: Catwalk 12
+  m_Name: Catwalk 41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2770,7 +2666,7 @@ GameObject:
   - component: {fileID: 463351464}
   - component: {fileID: 463351463}
   m_Layer: 3
-  m_Name: Catwalk 8 (12)
+  m_Name: Catwalk 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2784,8 +2680,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463351461}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 21, z: -94.29}
+  m_LocalRotation: {x: -0.000000007450581, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.000015258789, y: 21, z: -94.28999}
   m_LocalScale: {x: 15, y: 0.5, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3056,7 +2952,7 @@ GameObject:
   - component: {fileID: 604093290}
   - component: {fileID: 604093289}
   m_Layer: 3
-  m_Name: Catwalk 2
+  m_Name: Catwalk 53
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3273,7 +3169,7 @@ GameObject:
   - component: {fileID: 646396982}
   - component: {fileID: 646396981}
   m_Layer: 3
-  m_Name: Catwalk 7 (2)
+  m_Name: Catwalk 29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3379,7 +3275,7 @@ GameObject:
   - component: {fileID: 683387386}
   - component: {fileID: 683387385}
   m_Layer: 3
-  m_Name: Catwalk 8
+  m_Name: Catwalk 45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3485,7 +3381,7 @@ GameObject:
   - component: {fileID: 718542602}
   - component: {fileID: 718542601}
   m_Layer: 3
-  m_Name: Catwalk 8 (4)
+  m_Name: Catwalk 31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3622,7 +3518,7 @@ GameObject:
   - component: {fileID: 762216260}
   - component: {fileID: 762216259}
   m_Layer: 3
-  m_Name: Catwalk 10 (8)
+  m_Name: Catwalk 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3636,13 +3532,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762216257}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.004584825, y: -0.28812993, z: -0.0070572793, w: 0.95755434}
+  m_LocalRotation: {x: 0.0022562614, y: -0.28816208, z: 0.0006789719, w: 0.9575787}
   m_LocalPosition: {x: -77.73, y: 31.27, z: -52.65}
   m_LocalScale: {x: 10, y: 0.5, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1594836261}
-  m_LocalEulerAnglesHint: {x: 0.27, y: -33.496, z: -0.926}
+  m_LocalEulerAnglesHint: {x: 0.27, y: -33.496, z: 0}
 --- !u!64 &762216259
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3728,7 +3624,7 @@ GameObject:
   - component: {fileID: 782108785}
   - component: {fileID: 782108784}
   m_Layer: 3
-  m_Name: Catwalk 10 (1)
+  m_Name: Catwalk 37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3839,7 +3735,7 @@ GameObject:
   - component: {fileID: 784032360}
   - component: {fileID: 784032359}
   m_Layer: 3
-  m_Name: Catwalk 8 (6)
+  m_Name: Catwalk 28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3945,7 +3841,7 @@ GameObject:
   - component: {fileID: 829597474}
   - component: {fileID: 829597473}
   m_Layer: 3
-  m_Name: Catwalk 4
+  m_Name: Catwalk 50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4051,7 +3947,7 @@ GameObject:
   - component: {fileID: 886539794}
   - component: {fileID: 886539793}
   m_Layer: 3
-  m_Name: Catwalk 12 (4)
+  m_Name: Catwalk 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4157,7 +4053,7 @@ GameObject:
   - component: {fileID: 889721332}
   - component: {fileID: 889721331}
   m_Layer: 3
-  m_Name: Catwalk 8 (7)
+  m_Name: Catwalk 23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4263,7 +4159,7 @@ GameObject:
   - component: {fileID: 890402488}
   - component: {fileID: 890402487}
   m_Layer: 3
-  m_Name: Catwalk 8 (5)
+  m_Name: Catwalk 30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4584,7 +4480,7 @@ GameObject:
   - component: {fileID: 981287171}
   - component: {fileID: 981287170}
   m_Layer: 3
-  m_Name: Catwalk 9 (6)
+  m_Name: Catwalk 16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4695,7 +4591,7 @@ GameObject:
   - component: {fileID: 990144458}
   - component: {fileID: 990144457}
   m_Layer: 3
-  m_Name: Catwalk 10
+  m_Name: Catwalk 43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4920,6 +4816,7 @@ MonoBehaviour:
   allowInvoke: 1
   muzzleFlash: {fileID: 0}
   ammunitionDisplay: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!65 &1033655541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5109,7 +5006,7 @@ GameObject:
   - component: {fileID: 1089096469}
   - component: {fileID: 1089096468}
   m_Layer: 3
-  m_Name: Catwalk 12 (1)
+  m_Name: Catwalk 32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5215,7 +5112,7 @@ GameObject:
   - component: {fileID: 1095596379}
   - component: {fileID: 1095596378}
   m_Layer: 3
-  m_Name: Catwalk 10 (5)
+  m_Name: Catwalk 22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5321,7 +5218,7 @@ GameObject:
   - component: {fileID: 1103353507}
   - component: {fileID: 1103353506}
   m_Layer: 3
-  m_Name: Catwalk 9 (5)
+  m_Name: Catwalk 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5335,13 +5232,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103353504}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.018924067, y: 0.20779246, z: -0.029491508, w: 0.97754514}
+  m_LocalRotation: {x: -0.012102684, y: 0.20829692, z: 0.0025776937, w: 0.97798735}
   m_LocalPosition: {x: -85, y: 40.31, z: 40.88}
   m_LocalScale: {x: 10, y: 0.5, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1594836261}
-  m_LocalEulerAnglesHint: {x: -1.418, y: 24.047, z: -3.758}
+  m_LocalEulerAnglesHint: {x: -1.418, y: 24.047, z: 0}
 --- !u!64 &1103353506
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5427,7 +5324,7 @@ GameObject:
   - component: {fileID: 1117178723}
   - component: {fileID: 1117178722}
   m_Layer: 3
-  m_Name: Catwalk 7 (3)
+  m_Name: Catwalk 21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5533,7 +5430,7 @@ GameObject:
   - component: {fileID: 1145027516}
   - component: {fileID: 1145027515}
   m_Layer: 3
-  m_Name: Catwalk 11
+  m_Name: Catwalk 42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5639,7 +5536,7 @@ GameObject:
   - component: {fileID: 1152805867}
   - component: {fileID: 1152805866}
   m_Layer: 3
-  m_Name: Catwalk 10 (4)
+  m_Name: Catwalk 18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5745,7 +5642,7 @@ GameObject:
   - component: {fileID: 1198339261}
   - component: {fileID: 1198339260}
   m_Layer: 3
-  m_Name: Catwalk 12 (5)
+  m_Name: Catwalk 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5759,13 +5656,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198339258}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.039416037, y: -0.38222003, z: -0.049742922, w: 0.9218893}
+  m_LocalRotation: {x: -0.051247522, y: -0.3808146, z: -0.02114416, w: 0.922988}
   m_LocalPosition: {x: -60.41, y: 30.24, z: -59}
   m_LocalScale: {x: 10, y: 0.5, z: 10.4135475}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1594836261}
-  m_LocalEulerAnglesHint: {x: -6.356, y: -44.841, z: -3.553}
+  m_LocalEulerAnglesHint: {x: -6.356, y: -44.841, z: 0}
 --- !u!64 &1198339260
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5851,7 +5748,7 @@ GameObject:
   - component: {fileID: 1227675500}
   - component: {fileID: 1227675499}
   m_Layer: 3
-  m_Name: Catwalk 8 (9)
+  m_Name: Catwalk 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5865,13 +5762,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227675497}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.1691279, y: 0.32101366, z: 0.02359759, w: 0.931552}
+  m_LocalRotation: {x: -0.15803275, y: 0.32661664, z: 0.055489395, w: 0.93019795}
   m_LocalPosition: {x: -75.54, y: 44.19, z: 54.82}
   m_LocalScale: {x: 10, y: 0.5, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1594836261}
-  m_LocalEulerAnglesHint: {x: -19.284, y: 38.695, z: -3.926}
+  m_LocalEulerAnglesHint: {x: -19.284, y: 38.695, z: 0}
 --- !u!64 &1227675499
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5957,7 +5854,7 @@ GameObject:
   - component: {fileID: 1253409663}
   - component: {fileID: 1253409662}
   m_Layer: 3
-  m_Name: Catwalk 11 (7)
+  m_Name: Catwalk start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5971,9 +5868,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253409660}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.18331663, y: 0.6829312, z: -0.18331663, w: 0.6829312}
-  m_LocalPosition: {x: 24.72, y: 10.99, z: -94.29}
-  m_LocalScale: {x: 10, y: 0.5, z: 40}
+  m_LocalRotation: {x: 0.18331666, y: 0.68293124, z: -0.18331666, w: 0.6829311}
+  m_LocalPosition: {x: 24.719978, y: 10.989998, z: -94.29004}
+  m_LocalScale: {x: 10, y: 0.50000024, z: 40}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1594836261}
@@ -6063,7 +5960,7 @@ GameObject:
   - component: {fileID: 1336832579}
   - component: {fileID: 1336832578}
   m_Layer: 3
-  m_Name: Catwalk 7 (4)
+  m_Name: Catwalk 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6077,13 +5974,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336832576}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.03700212, y: 0.38692033, z: -0.01831161, w: 0.9211884}
+  m_LocalRotation: {x: -0.024897724, y: 0.38788888, z: 0.010482408, w: 0.92131025}
   m_LocalPosition: {x: -59.01, y: 44.7, z: 60.14}
   m_LocalScale: {x: 10, y: 0.5, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1594836261}
-  m_LocalEulerAnglesHint: {x: -3.096, y: 45.664, z: -3.581}
+  m_LocalEulerAnglesHint: {x: -3.096, y: 45.664, z: 0}
 --- !u!64 &1336832578
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6169,7 +6066,7 @@ GameObject:
   - component: {fileID: 1345773243}
   - component: {fileID: 1345773242}
   m_Layer: 3
-  m_Name: Catwalk 7 (1)
+  m_Name: Catwalk 36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6275,7 +6172,7 @@ GameObject:
   - component: {fileID: 1377390665}
   - component: {fileID: 1377390664}
   m_Layer: 3
-  m_Name: Catwalk 9 (1)
+  m_Name: Catwalk 38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6381,7 +6278,7 @@ GameObject:
   - component: {fileID: 1381833744}
   - component: {fileID: 1381833743}
   m_Layer: 3
-  m_Name: Catwalk 8 (10)
+  m_Name: 'Catwalk 8 '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6395,13 +6292,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381833741}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.20536728, y: -0.10686232, z: -0.0035617326, w: 0.97282684}
+  m_LocalRotation: {x: -0.20316896, y: -0.11098088, z: -0.0231841, w: 0.97255754}
   m_LocalPosition: {x: -90.59, y: 35.54, z: -23.82}
   m_LocalScale: {x: 10, y: 0.5, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1594836261}
-  m_LocalEulerAnglesHint: {x: -23.599, y: -13.02, z: 2.312}
+  m_LocalEulerAnglesHint: {x: -23.599, y: -13.02, z: 0}
 --- !u!64 &1381833743
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6878,7 +6775,7 @@ GameObject:
   - component: {fileID: 1484502827}
   - component: {fileID: 1484502826}
   m_Layer: 3
-  m_Name: Catwalk 6
+  m_Name: Catwalk 51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7261,6 +7158,23 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1253409661}
+  - {fileID: 463351462}
+  - {fileID: 250077891}
+  - {fileID: 223058410}
+  - {fileID: 190525520}
+  - {fileID: 1198339259}
+  - {fileID: 762216258}
+  - {fileID: 2084253653}
+  - {fileID: 1381833742}
+  - {fileID: 886539792}
+  - {fileID: 247535797}
+  - {fileID: 300347614}
+  - {fileID: 1103353505}
+  - {fileID: 1227675498}
+  - {fileID: 1336832577}
+  - {fileID: 87245169}
+  - {fileID: 981287169}
   - {fileID: 256169943}
   - {fileID: 604093288}
   - {fileID: 829597472}
@@ -7285,7 +7199,6 @@ Transform:
   - {fileID: 1847283104}
   - {fileID: 1152805865}
   - {fileID: 1656168150}
-  - {fileID: 115214290}
   - {fileID: 1095596377}
   - {fileID: 718542600}
   - {fileID: 890402486}
@@ -7295,25 +7208,8 @@ Transform:
   - {fileID: 1145027514}
   - {fileID: 448536057}
   - {fileID: 1887833759}
-  - {fileID: 1381833742}
-  - {fileID: 2084253653}
-  - {fileID: 762216258}
-  - {fileID: 190525520}
-  - {fileID: 250077891}
-  - {fileID: 1253409661}
-  - {fileID: 1198339259}
-  - {fileID: 223058410}
-  - {fileID: 463351462}
   - {fileID: 294461185}
   - {fileID: 1377390663}
-  - {fileID: 1336832577}
-  - {fileID: 1227675498}
-  - {fileID: 1103353505}
-  - {fileID: 300347614}
-  - {fileID: 247535797}
-  - {fileID: 886539792}
-  - {fileID: 981287169}
-  - {fileID: 87245169}
   - {fileID: 782108783}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7512,7 +7408,7 @@ GameObject:
   - component: {fileID: 1656168152}
   - component: {fileID: 1656168151}
   m_Layer: 3
-  m_Name: Catwalk 11 (3)
+  m_Name: Catwalk 17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7794,6 +7690,7 @@ MonoBehaviour:
   allowInvoke: 1
   muzzleFlash: {fileID: 0}
   ammunitionDisplay: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!23 &1778312940
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8053,7 +7950,7 @@ GameObject:
   - component: {fileID: 1847283106}
   - component: {fileID: 1847283105}
   m_Layer: 3
-  m_Name: Catwalk 9 (4)
+  m_Name: Catwalk 19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8067,13 +7964,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847283103}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.025678106, y: 0.7425774, z: 0.023827793, w: 0.66884357}
+  m_LocalRotation: {x: -0.023348084, y: 0.7426514, z: 0.02592748, w: 0.6687687}
   m_LocalPosition: {x: 11.14, y: 52.83, z: 93.76}
   m_LocalScale: {x: 10, y: 0.5, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1594836261}
-  m_LocalEulerAnglesHint: {x: -3.999, y: 95.993, z: -0.36}
+  m_LocalEulerAnglesHint: {x: -3.999, y: 95.993, z: 0}
 --- !u!64 &1847283105
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8159,7 +8056,7 @@ GameObject:
   - component: {fileID: 1854959749}
   - component: {fileID: 1854959748}
   m_Layer: 3
-  m_Name: Catwalk 8 (3)
+  m_Name: Catwalk 35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8265,7 +8162,7 @@ GameObject:
   - component: {fileID: 1887833761}
   - component: {fileID: 1887833760}
   m_Layer: 3
-  m_Name: Catwalk 8 (1)
+  m_Name: Catwalk 40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8477,7 +8374,7 @@ GameObject:
   - component: {fileID: 1892618113}
   - component: {fileID: 1892618112}
   m_Layer: 3
-  m_Name: Catwalk 11 (2)
+  m_Name: Catwalk 25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8689,7 +8586,7 @@ GameObject:
   - component: {fileID: 1896093997}
   - component: {fileID: 1896093996}
   m_Layer: 3
-  m_Name: Catwalk 9 (3)
+  m_Name: Catwalk 27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8901,7 +8798,7 @@ GameObject:
   - component: {fileID: 1937085662}
   - component: {fileID: 1937085661}
   m_Layer: 3
-  m_Name: Catwalk 7
+  m_Name: Catwalk 47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9012,7 +8909,7 @@ GameObject:
   - component: {fileID: 1985366850}
   - component: {fileID: 1985366849}
   m_Layer: 3
-  m_Name: Catwalk 10 (2)
+  m_Name: Catwalk 33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9209,6 +9106,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   orientation: {fileID: 933049228}
+  Camera: {fileID: 0}
 --- !u!136 &2026072978
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9593,7 +9491,7 @@ GameObject:
   - component: {fileID: 2084253655}
   - component: {fileID: 2084253654}
   m_Layer: 3
-  m_Name: Catwalk 9 (7)
+  m_Name: Catwalk 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9607,13 +9505,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084253652}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0025078405, y: -0.1995709, z: -0.0023760307, w: 0.9798773}
+  m_LocalRotation: {x: -0.0028732163, y: -0.1995638, z: -0.0005851632, w: 0.9798805}
   m_LocalPosition: {x: -84.8, y: 31.31, z: -40.7}
   m_LocalScale: {x: 10, y: 0.5, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1594836261}
-  m_LocalEulerAnglesHint: {x: -0.336, y: -23.023, z: -0.209}
+  m_LocalEulerAnglesHint: {x: -0.336, y: -23.023, z: 0}
 --- !u!64 &2084253654
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9699,7 +9597,7 @@ GameObject:
   - component: {fileID: 2091910880}
   - component: {fileID: 2091910879}
   m_Layer: 3
-  m_Name: Catwalk 9 (2)
+  m_Name: Catwalk 34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9714,7 +9612,7 @@ Transform:
   m_GameObject: {fileID: 2091910877}
   serializedVersion: 2
   m_LocalRotation: {x: 0.011384549, y: -0.7237904, z: 0.011945139, w: 0.6898226}
-  m_LocalPosition: {x: 7.09, y: 87.59, z: -95.58}
+  m_LocalPosition: {x: 7.03, y: 87.59, z: -94.43}
   m_LocalScale: {x: 10, y: 0.5, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
