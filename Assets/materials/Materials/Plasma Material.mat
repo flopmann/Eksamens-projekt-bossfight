@@ -107,8 +107,8 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
-    - _EmissionDimming: 0.35
-    - _EmissionStrength: 0.62
+    - _EmissionDimming: 0.37
+    - _EmissionStrength: 0.93
     - _EnvironmentReflections: 1
     - _FlowSpeed: 0.13
     - _FoamDensity: 2.78
