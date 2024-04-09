@@ -108,9 +108,9 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EmissionDimming: 0
-    - _EmissionStrength: -0.01
+    - _EmissionStrength: 0.2
     - _EnvironmentReflections: 1
-    - _FlowSpeed: 0.28
+    - _FlowSpeed: 1.12
     - _FoamDensity: 1.93
     - _FoamSpeed: 1.92
     - _FoamThickness: 2.66
@@ -123,7 +123,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Scale: 1.26
+    - _Scale: 5.14
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
