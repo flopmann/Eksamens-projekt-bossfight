@@ -16,12 +16,13 @@ public class BossAi : MonoBehaviour
     public Animator animator;
     public float timeTillAttack = 1.5f;
     public float rangedRange = 20f;
+    
 
     public bool stage1;
     bool rangedTargetSpawned;
     bool meleeTargetSpawned;
 
-    public float puzzleHealth = 100f;
+    private float timeTillSwitch = 5f;
 
     bool hasPicked;
 
@@ -39,7 +40,7 @@ public class BossAi : MonoBehaviour
     {
         Currentstate = BossState.Idle;
         animator = GetComponent<Animator>();
-        //stage1 = true;
+        stage1 = true;
         rangedTargetSpawned = false;
         hasPicked = false;
         meleeTargetSpawned = false;
@@ -63,10 +64,13 @@ public class BossAi : MonoBehaviour
                  rangedAttacking();
                  break;
         }
-        if (puzzleHealth <= 0)
+        if (Puzzle.Symbol1Health == 0 && Puzzle.Symbol1Health == 0 && Puzzle.Symbol3Health == 0 && Puzzle.Symbol4Health == 0)
         {
-            stage1 = false;
-          
+            timeTillSwitch -= Time.deltaTime;
+            if (timeTillSwitch <= 0f)
+            {
+                stage1 = false;
+            }
         }
     }
 
@@ -177,5 +181,11 @@ public class BossAi : MonoBehaviour
 
 
         }
+    }
+
+    void Changefase()
+    {
+        
+
     }
 }
