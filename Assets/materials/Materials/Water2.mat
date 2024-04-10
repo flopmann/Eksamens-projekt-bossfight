@@ -40,6 +40,7 @@ Material:
     m_Floats:
     - _EmissionStrength: 0.96
     - _FlowSpeed: 0.19
+    - _FoamDensity: 0.74
     - _Scale: 2.35
     m_Colors:
     - _FoamColor: {r: 0.5424528, g: 0.8269802, b: 1, a: 0}
