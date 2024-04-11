@@ -28,6 +28,8 @@ public class BossAi : MonoBehaviour
 
     private int meleeOrRanged;
 
+    public static int BossStage;
+
     public enum BossState
     {
         Moving,
@@ -44,6 +46,7 @@ public class BossAi : MonoBehaviour
         rangedTargetSpawned = false;
         hasPicked = false;
         meleeTargetSpawned = false;
+        
     }
 
    
@@ -70,6 +73,7 @@ public class BossAi : MonoBehaviour
             if (timeTillSwitch <= 0f)
             {
                 stage1 = false;
+                BossStage = 2;
             }
         }
     }
@@ -183,9 +187,5 @@ public class BossAi : MonoBehaviour
         }
     }
 
-    void Changefase()
-    {
-        
-
-    }
+    
 }

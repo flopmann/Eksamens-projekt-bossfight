@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AIMove : MonoBehaviour
 {
@@ -8,11 +9,22 @@ public class AIMove : MonoBehaviour
     private Vector3 Target;
     public Transform Player;
     public float currentSpeed;
+    public float stage2Speed;
+
     
     public Transform target;
 
 
     public float speed = 1.0f;
+
+    NavMeshAgent agent;
+
+
+     void Start()
+    {
+        agent = GetComponent<NavMeshAgent>();
+        //target.y = transform.position.y;
+    }
 
     void Update()
     {
@@ -30,14 +42,22 @@ public class AIMove : MonoBehaviour
 
     public void moveAi()
     {
-        Target = Player.position;
-        Target.y = transform.position.y;
-        Debug.Log("Trying to move");
-        
+        //Target = Player.position;
+        //Target.y = transform.position.y;
+        //Debug.Log("Trying to move");
 
-        currentSpeed = moveSpeed;
+        //if (BossAi.BossStage != 2)
+        //{
+        //  currentSpeed = moveSpeed;
+        //}
+        //if (BossAi.BossStage == 2)
+        //{
+        //  currentSpeed = stage2Speed;
+        //}
 
-        Vector3 newPosition = Vector3.MoveTowards(transform.position, Target, currentSpeed * Time.deltaTime);
-        transform.position = newPosition;        
+        //Vector3 newPosition = Vector3.MoveTowards(transform.position, Target, currentSpeed * Time.deltaTime);
+        //transform.position = newPosition;
+        agent.SetDestination(target.position);
+
     }
 }
