@@ -40,6 +40,7 @@ Material:
     m_Floats:
     - _FoamDensity: 2.1
     - _FoamThickness: 4.94
+    - _Opacity: 0.75
     - _Scale: 8.13
     m_Colors: []
   m_BuildTextureStacks: []
