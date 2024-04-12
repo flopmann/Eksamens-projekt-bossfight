@@ -17,6 +17,10 @@ public class rangedMovement : MonoBehaviour
     void Update()
     {
         attackMove();
+        if (gameObject.transform.position == attackTarget.position)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void attackMove()
@@ -32,10 +36,20 @@ public class rangedMovement : MonoBehaviour
     {
         if (col.collider.tag == "Player")
         {
-            attackMovement.Health = attackMovement.Health - attackDamage;
-            Destroy(gameObject);
-            Debug.Log(attackMovement.Health);
+            if (BossAi.BossStage != 2)
+            {
+                attackMovement.Health = attackMovement.Health - attackDamage;
+                Destroy(gameObject);
+                Debug.Log(attackMovement.Health);
+            }
+            else
+            {
+                attackMovement.Health = attackMovement.Health - attackDamage*2;
+                Destroy(gameObject);
+                Debug.Log(attackMovement.Health);
+            }
         }
+        
     }
 
 

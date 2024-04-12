@@ -14,30 +14,35 @@ public class attackMovement : MonoBehaviour
     void Update()
     {
         attackMove();
-        
+        if (transform.position == attackTarget.position)
+        {
+            Destroy(gameObject);
+        }
     }
     public void attackMove()
     {
         Target = attackTarget.position;
 
-        Vector3 newPosition = Vector3.MoveTowards(transform.position, Target, attackSpeed*Time.deltaTime);
+        Vector3 newPosition = Vector3.MoveTowards(transform.position, Target, attackSpeed * Time.deltaTime);
         transform.position = newPosition;
-
-        //if (transform.position == attackTarget.position)
-        //{
-          //  Destroy(gameObject);
-        //}
-
     }
 
     void OnCollisionEnter(Collision col)
     {
         if (col.collider.tag == "Player")
         {
-            Health = Health - attackDamage;
-            Destroy(gameObject);
-            Debug.Log(Health);
+            if (BossAi.BossStage != 2)
+            {
+                Health = Health - attackDamage;
+                Destroy(gameObject);
+                Debug.Log(Health);
+            }
+            else
+            {
+                Health = Health - attackDamage*2;
+                Destroy(gameObject);
+                Debug.Log(Health);
+            }
         }
     }
-
 }
