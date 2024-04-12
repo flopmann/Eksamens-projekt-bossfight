@@ -24,6 +24,17 @@ public class Puzzle : MonoBehaviour
     public static int Symbol2Health = 400;
     public static int Symbol3Health = 400;
     public static int Symbol4Health = 400;
+    [Header("non active boss symbol")]
+    public GameObject BossSymbol1;
+    public GameObject BossSymbol2;
+    public GameObject BossSymbol3;
+    public GameObject BossSymbol4;
+    [Header("active boss symbol")]
+    public GameObject Ring1;
+    public GameObject Ring2;
+    public GameObject Ring3;
+    public GameObject Ring4;
+
 
 
     private GameObject currentSymbolBoss;  
@@ -39,7 +50,7 @@ public class Puzzle : MonoBehaviour
 
     void Start()
     {
-        activeSymbol = false;
+        timeTillNewSymbol = 0f;
     }
 
     
@@ -49,7 +60,7 @@ public class Puzzle : MonoBehaviour
         {
             chooseSymbol();
             activeSymbol = true;
-            timeTillNewSymbol = 10f;  
+            timeTillNewSymbol = 20f;  
         }
         if (activeSymbol == true)
         {
@@ -77,7 +88,7 @@ public class Puzzle : MonoBehaviour
         {
             if (Symbol1Health <= 400)
             {
-                currentSymbolBoss = Instantiate(Symbol1, symbol1Boss.position, Quaternion.identity);
+                currentSymbolBoss = Instantiate(Ring1, symbol1Boss.position, Quaternion.identity);
                 currentSymbolStage = Instantiate(Symbol1, symbol1Stage.position, Quaternion.identity);
             }
             if (Symbol1Health <= 0)
@@ -89,7 +100,7 @@ public class Puzzle : MonoBehaviour
         {
             if (Symbol2Health <= 400)
             {
-                currentSymbolBoss = Instantiate(Symbol2, symbol2Boss.position, Quaternion.identity);
+                currentSymbolBoss = Instantiate(Ring2, symbol2Boss.position, Quaternion.identity);
                 currentSymbolStage = Instantiate(Symbol2, symbol2Stage.position, Quaternion.identity);
             }
             if (Symbol2Health <= 0)
@@ -101,7 +112,7 @@ public class Puzzle : MonoBehaviour
         {
             if (Symbol3Health <= 400)
             {
-                currentSymbolBoss = Instantiate(Symbol3, symbol3Boss.position, Quaternion.identity);
+                currentSymbolBoss = Instantiate(Ring3, symbol3Boss.position, Quaternion.identity);
                 currentSymbolStage = Instantiate(Symbol3, symbol3Stage.position, Quaternion.identity);
             }
             if (Symbol3Health <= 0)
@@ -113,7 +124,7 @@ public class Puzzle : MonoBehaviour
         {
             if (Symbol4Health <= 400)
             {
-                currentSymbolBoss = Instantiate(Symbol4, symbol4Boss.position, Quaternion.identity);
+                currentSymbolBoss = Instantiate(Ring4, symbol4Boss.position, Quaternion.identity);
                 currentSymbolStage = Instantiate(Symbol4, symbol4Stage.position, Quaternion.identity);
             }
             if (Symbol4Health <= 0)
@@ -125,13 +136,30 @@ public class Puzzle : MonoBehaviour
     }
     void deActivateSymbol()
     {
-        //Destroy(Symbol1);
-        //Destroy(Symbol2);
-        //Destroy(Symbol3);
-        //Destroy(Symbol4);
+        
         Destroy(currentSymbolBoss);
         Destroy(currentSymbolStage);
 
+    }
+
+    void destroyRings()
+    {
+        if (Symbol1Health == 0)
+        {
+            Destroy(BossSymbol1);
+        }
+        if (Symbol2Health == 0)
+        {
+            Destroy(BossSymbol2);
+        }
+        if (Symbol3Health == 0)
+        {
+            Destroy(BossSymbol3);
+        }
+        if (Symbol4Health == 0)
+        {
+            Destroy(BossSymbol4);
+        }
     }
 
     
