@@ -81,6 +81,7 @@ public class BossAi : MonoBehaviour
 
     void idleState()
     {
+        animator.SetBool("isIdle", true);
         timeTillStart -= Time.deltaTime;
         if (timeTillStart <= 0f)
         {
@@ -90,7 +91,8 @@ public class BossAi : MonoBehaviour
     
     void moving()
     {
-       
+        animator.SetBool("isIdle", false);
+        animator.SetBool("isWalking", true);
         
         Debug.Log(Currentstate);
         GetComponent<AIMove>().moveAi();
@@ -139,7 +141,7 @@ public class BossAi : MonoBehaviour
     }
     void meleeAttacking()
     {
-        
+        animator.SetBool("isWalking", false);
         if ((Target.transform.position-transform.position).magnitude >= meleeRange) 
         {
             timeTillChase -= Time.deltaTime;
@@ -160,13 +162,14 @@ public class BossAi : MonoBehaviour
         {
             GetComponent<MeleeAttack>().spawnTarget();
             meleeTargetSpawned = true;
-
+            animator.SetBool("isAttacking", false);
         }
         if (meleeTargetSpawned == true)
         {
             meleeTargetSpawned = false;
             GetComponent<MeleeAttack>().meleeAttack();
             timeTillAttack = 5f;
+            animator.SetBool("isAttacking", true);
         }
         hasPicked = false;
     }
