@@ -29,9 +29,6 @@ public class BossHealth : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        
-      
     }
 
      void OnCollisionEnter(Collision col)
