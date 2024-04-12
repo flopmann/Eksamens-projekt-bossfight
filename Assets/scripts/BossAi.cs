@@ -46,7 +46,7 @@ public class BossAi : MonoBehaviour
         rangedTargetSpawned = false;
         hasPicked = false;
         meleeTargetSpawned = false;
-        
+        BossStage = 2;
     }
 
    

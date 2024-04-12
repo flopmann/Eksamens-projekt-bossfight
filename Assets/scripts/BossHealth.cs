@@ -29,17 +29,18 @@ public class BossHealth : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        
       
     }
-    void OnCollisionEnter(Collision col)
-    {
-        if (BossAi.BossStage == 2)
-        {
-            if (col.collider.tag == "bullet")
-            {
-                health = health - 20f;
-            }
-        }
 
+     void OnCollisionEnter(Collision col)
+    {
+        
+        if (col.gameObject.tag == "bullet")
+        {
+            health = health - 20;
+            Debug.Log(health);
+        }
     }
 }
