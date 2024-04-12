@@ -9966,7 +9966,7 @@ MonoBehaviour:
   meleeHitBox: {fileID: 2507471587006195873, guid: 2998cf37c5f0f2a40ade9468285f307c, type: 3}
   Target: {fileID: 3282681742348772801, guid: ea109cec66246234a81b5e9f3b5fbc35, type: 3}
   attackPoint: {fileID: 1603316249}
-  attackTarget: {fileID: 1489825601}
+  attackTarget: {fileID: 2038016550}
 --- !u!114 &1452682926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9992,12 +9992,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2d4e620a06ca7340a36e5322caf51bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
   Player: {fileID: 2038016550}
-  currentSpeed: 0
-  stage2Speed: 0
   target: {fileID: 2038016550}
   speed: 1
+  agent: {fileID: 0}
 --- !u!114 &1452682928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10017,7 +10015,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   timeTillAttack: 2
   rangedRange: 20
-  stage1: 1
+  stage1: 0
 --- !u!195 &1452682929
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10032,7 +10030,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 13
+  m_StoppingDistance: 14.3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

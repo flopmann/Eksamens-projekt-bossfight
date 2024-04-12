@@ -76,6 +76,7 @@ public class BossAi : MonoBehaviour
                 BossStage = 2;
             }
         }
+        
     }
 
     void idleState()
@@ -105,14 +106,24 @@ public class BossAi : MonoBehaviour
                 meleeOrRanged = UnityEngine.Random.Range(1, 3);
                 Debug.Log(meleeOrRanged);
                 hasPicked = true;
+                
             }
+            if (meleeOrRanged == 1)
+            {
+                GetComponent<AIMove>().agent.stoppingDistance = rangedRange;
+            }
+            else
+            {
+                GetComponent<AIMove>().agent.stoppingDistance = meleeOrRanged;
+            }
+
 
             if ((Target.transform.position - transform.position).magnitude <= rangedRange && meleeOrRanged == 1)
             {
                 Currentstate = BossState.Rangedattacking;
             }
             
-           if ((Target.transform.position - transform.position).magnitude <= meleeRange && meleeOrRanged == 2)
+            if ((Target.transform.position - transform.position).magnitude <= meleeRange && meleeOrRanged == 2)
             {
                 Currentstate = BossState.Meleeattacking;
             }
@@ -156,9 +167,8 @@ public class BossAi : MonoBehaviour
             meleeTargetSpawned = false;
             GetComponent<MeleeAttack>().meleeAttack();
             timeTillAttack = 5f;
-            GetComponent<AIMove>().currentSpeed = 0f;
         }
-       
+        hasPicked = false;
     }
     void rangedAttacking()
     {
@@ -185,6 +195,7 @@ public class BossAi : MonoBehaviour
 
 
         }
+        hasPicked = false;
     }
 
     
