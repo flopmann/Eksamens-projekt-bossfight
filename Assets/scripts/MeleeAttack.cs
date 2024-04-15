@@ -5,42 +5,31 @@ using static UnityEngine.GraphicsBuffer;
 
 public class MeleeAttack : MonoBehaviour
 {
-    public GameObject meleeHitBox;
-    public GameObject Target;
-    private GameObject currentTarget;
-
-    public Transform attackPoint;
-    public Transform attackTarget;
+    
+    
 
     public static int Health = 200;
 
-
-
-
-    public void spawnTarget()
+    private void Start()
     {
-
-        currentTarget = Instantiate(Target, attackTarget.position, Quaternion.identity);
-
+        Debug.Log("???");
     }
 
-    public void meleeAttack()
-    {
-        
-        
-        Debug.Log("attacking");
-        GameObject currentHitBox = Instantiate(meleeHitBox, attackPoint.position, Quaternion.identity);
-        currentHitBox.GetComponent<attackMovement>().attackTarget = currentTarget.transform;
-    }
 
     private void OnCollisionEnter(Collision col)
     {
+        Debug.Log("Collision with " + col.gameObject.name);
         if (col.gameObject.tag == "Player")
         {
             if (BossAi.BossStage != 2)
             {
-
+                Health = Health - 25;
             }
+            if (BossAi.BossStage == 2)
+            {
+                Health = Health - 25 * 2;
+            }
+            Debug.Log(Health);
         }
 
 
