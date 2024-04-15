@@ -20,7 +20,7 @@ public class BossAi : MonoBehaviour
 
     public bool stage1;
     bool rangedTargetSpawned;
-    bool meleeTargetSpawned;
+    
 
     private float timeTillSwitch = 5f;
 
@@ -45,7 +45,6 @@ public class BossAi : MonoBehaviour
         stage1 = true;
         rangedTargetSpawned = false;
         hasPicked = false;
-        meleeTargetSpawned = false;
         BossStage = 2;
     }
 
@@ -149,6 +148,7 @@ public class BossAi : MonoBehaviour
             {
                 if(stage1 == false)
                 {
+                    meleeOrRanged = 0;
                     hasPicked = false;
                     Currentstate = BossState.Moving;
                 }
@@ -160,15 +160,15 @@ public class BossAi : MonoBehaviour
         timeTillAttack -= Time.deltaTime;
         if (timeTillAttack <= 0)
         {
-            
-            meleeTargetSpawned = true;
-            
-        }
-        if (meleeTargetSpawned == true)
-        {
             timeTillAttack = 5f;
             animator.SetBool("isAttacking", true);
+
         }
+        if (timeTillAttack <= 4)
+        {
+            animator.SetBool("isIdle", true);
+        }
+        
         hasPicked = false;
     }
     void rangedAttacking()
@@ -179,6 +179,7 @@ public class BossAi : MonoBehaviour
 
         if ((Target.transform.position - transform.position).magnitude >= rangedRange)
         {
+            meleeOrRanged = 0;
             hasPicked = false;
             Currentstate = BossState.Moving;
         }
