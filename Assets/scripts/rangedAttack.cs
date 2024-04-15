@@ -7,6 +7,7 @@ public class rangedAttack : MonoBehaviour
     public GameObject rangedHitBox;
     public GameObject Target;
     private GameObject currentTarget;
+    public Transform Boss;
 
     public Transform attackPoint;
     public Transform attackTarget;
@@ -21,7 +22,7 @@ public class rangedAttack : MonoBehaviour
     public void spawnHitBox()
     {
         
-        GameObject currentHitBox = Instantiate(rangedHitBox, attackPoint.position, Quaternion.identity);
+        GameObject currentHitBox = Instantiate(rangedHitBox, attackPoint.position, Boss.rotation);
         currentHitBox.GetComponent<rangedMovement>().attackTarget = currentTarget.transform; 
 
     }
