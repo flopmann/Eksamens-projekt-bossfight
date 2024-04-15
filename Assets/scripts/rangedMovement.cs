@@ -38,15 +38,15 @@ public class rangedMovement : MonoBehaviour
         {
             if (BossAi.BossStage != 2)
             {
-                attackMovement.Health = attackMovement.Health - attackDamage;
+                MeleeAttack.Health = MeleeAttack.Health - attackDamage;
                 Destroy(gameObject);
                 Debug.Log(attackMovement.Health);
             }
             else
             {
-                attackMovement.Health = attackMovement.Health - attackDamage*2;
+                MeleeAttack.Health = MeleeAttack.Health - attackDamage*2;
                 Destroy(gameObject);
-                Debug.Log(attackMovement.Health);
+                Debug.Log(MeleeAttack.Health);
             }
         }
         
