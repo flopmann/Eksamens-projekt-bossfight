@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed;
+    public float moveSpeed; 
     public float sprintSpeed;
 
     public float groundDrag;
@@ -35,6 +35,8 @@ public class Movement : MonoBehaviour
     Rigidbody rb;
 
     public GameObject Camera;
+    public AudioSource footstepAudio;
+    public AudioSource sprintAudio;
 
     private void Start()
     {
@@ -59,11 +61,12 @@ public class Movement : MonoBehaviour
         if (!Input.GetKey(sprintKey))
         {
             sprint = false;
+            
         }
 
         transform.rotation = Camera.transform.rotation;
 
-
+        
     }
 
     private void FixedUpdate()
@@ -77,46 +80,66 @@ public class Movement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        if(Input.GetKey(jumpKey) && readyToJump && grounded)
+        if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.S)|| Input.GetKey(KeyCode.D))
+        {
+            footstepAudio.enabled = true;
+        }
+        else
+        {
+            footstepAudio.enabled = false;
+        }
+
+        if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;
 
             Jump();
 
             Invoke(nameof(resetJump), jumpCooldown);
+            
         }
 
         if (Input.GetKey(sprintKey))
         {
             sprint = true;
+            sprintAudio.enabled = true;
+        }
+        else
+        {
+            sprintAudio.enabled = false;
         }
 
-        
 
     }
 
     private void MovePlayer()
     {
+
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
         moveDirection.y = 0;
 
         if (grounded)
         {
+
             if (sprint == false)
             {
+                
                 rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+                
             }
             else
             {
                 rb.AddForce(moveDirection.normalized * sprintSpeed* 10f, ForceMode.Force);
+                
             }
         }
         
 
         else if (!grounded)
         {
-               
-                rb.AddForce(moveDirection.normalized * moveSpeed * 8f * airMultiplier , ForceMode.Force);           
+            
+
+            rb.AddForce(moveDirection.normalized * moveSpeed * 8f * airMultiplier , ForceMode.Force);           
 
         }
     }
