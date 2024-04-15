@@ -16,7 +16,7 @@ public class MeleeAttack : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision col)
+    private void OnTriggerEnter(Collider col)
     {
         Debug.Log("Collision with " + col.gameObject.name);
         if (col.gameObject.tag == "Player")
