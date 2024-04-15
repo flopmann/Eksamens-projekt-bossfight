@@ -10,7 +10,7 @@ public class attackMovement : MonoBehaviour
     public float attackSpeed = 80f;
     public int attackDamage = 25;
 
-    public static int Health = 200;
+    
     void Update()
     {
         attackMove();

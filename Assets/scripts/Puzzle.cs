@@ -88,8 +88,8 @@ public class Puzzle : MonoBehaviour
         {
             if (Symbol1Health <= 400)
             {
-                currentSymbolBoss = Instantiate(Ring1, symbol1Boss.position, Quaternion.identity);
-                currentSymbolStage = Instantiate(Symbol1, symbol1Stage.position, Quaternion.identity);
+                
+                currentSymbolStage = Instantiate(Symbol1, symbol1Stage.position, symbol1Stage.rotation);
             }
             if (Symbol1Health <= 0)
             {
@@ -100,8 +100,8 @@ public class Puzzle : MonoBehaviour
         {
             if (Symbol2Health <= 400)
             {
-                currentSymbolBoss = Instantiate(Ring2, symbol2Boss.position, Quaternion.identity);
-                currentSymbolStage = Instantiate(Symbol2, symbol2Stage.position, Quaternion.identity);
+                
+                currentSymbolStage = Instantiate(Symbol2, symbol2Stage.position, symbol2Stage.rotation);
             }
             if (Symbol2Health <= 0)
             {
@@ -112,8 +112,8 @@ public class Puzzle : MonoBehaviour
         {
             if (Symbol3Health <= 400)
             {
-                currentSymbolBoss = Instantiate(Ring3, symbol3Boss.position, Quaternion.identity);
-                currentSymbolStage = Instantiate(Symbol3, symbol3Stage.position, Quaternion.identity);
+                
+                currentSymbolStage = Instantiate(Symbol3, symbol3Stage.position, symbol3Stage.rotation);
             }
             if (Symbol3Health <= 0)
             {
@@ -124,8 +124,8 @@ public class Puzzle : MonoBehaviour
         {
             if (Symbol4Health <= 400)
             {
-                currentSymbolBoss = Instantiate(Ring4, symbol4Boss.position, Quaternion.identity);
-                currentSymbolStage = Instantiate(Symbol4, symbol4Stage.position, Quaternion.identity);
+                
+                currentSymbolStage = Instantiate(Symbol4, symbol4Stage.position, symbol4Stage.rotation);
             }
             if (Symbol4Health <= 0)
             {

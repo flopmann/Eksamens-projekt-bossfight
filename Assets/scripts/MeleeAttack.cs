@@ -12,10 +12,10 @@ public class MeleeAttack : MonoBehaviour
     public Transform attackPoint;
     public Transform attackTarget;
 
+    public static int Health = 200;
 
-    
 
-    
+
 
     public void spawnTarget()
     {
@@ -31,9 +31,21 @@ public class MeleeAttack : MonoBehaviour
         Debug.Log("attacking");
         GameObject currentHitBox = Instantiate(meleeHitBox, attackPoint.position, Quaternion.identity);
         currentHitBox.GetComponent<attackMovement>().attackTarget = currentTarget.transform;
-    }   
+    }
 
-    
-   
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            if (BossAi.BossStage != 2)
+            {
+
+            }
+        }
+
+
+
+    }
+
 
 }
