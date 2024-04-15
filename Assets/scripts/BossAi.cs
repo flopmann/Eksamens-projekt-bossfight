@@ -42,7 +42,7 @@ public class BossAi : MonoBehaviour
     {
         Currentstate = BossState.Idle;
         animator = GetComponent<Animator>();
-        stage1 = true;
+        stage1 = false;
         rangedTargetSpawned = false;
         hasPicked = false;
         BossStage = 2;
@@ -104,9 +104,10 @@ public class BossAi : MonoBehaviour
         {
             if (hasPicked == false)
             {
-                meleeOrRanged = UnityEngine.Random.Range(1, 3);
+                //meleeOrRanged = UnityEngine.Random.Range(1, 3);
                 Debug.Log(meleeOrRanged);
                 hasPicked = true;
+                meleeOrRanged = 1;
                 
             }
             if (meleeOrRanged == 1)
@@ -175,7 +176,7 @@ public class BossAi : MonoBehaviour
     {
         animator.SetBool("isWalking", false);
         Debug.Log("Attacking");
-        timeTillAttack -= Time.deltaTime;
+        timeTillRangedAttack -= Time.deltaTime;
 
         if ((Target.transform.position - transform.position).magnitude >= rangedRange)
         {
