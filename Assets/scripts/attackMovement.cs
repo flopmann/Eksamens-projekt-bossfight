@@ -10,6 +10,7 @@ public class attackMovement : MonoBehaviour
     public float attackSpeed = 80f;
     public int attackDamage = 25;
 
+
     
     void Update()
     {
@@ -33,15 +34,15 @@ public class attackMovement : MonoBehaviour
         {
             if (BossAi.BossStage != 2)
             {
-                Health = Health - attackDamage;
+                MeleeAttack.Health = MeleeAttack.Health - attackDamage;
                 Destroy(gameObject);
-                Debug.Log(Health);
+                Debug.Log(MeleeAttack.Health);
             }
             else
             {
-                Health = Health - attackDamage*2;
+                MeleeAttack.Health = MeleeAttack.Health - attackDamage*2;
                 Destroy(gameObject);
-                Debug.Log(Health);
+                Debug.Log(MeleeAttack.Health);
             }
         }
     }

@@ -40,7 +40,7 @@ public class rangedMovement : MonoBehaviour
             {
                 MeleeAttack.Health = MeleeAttack.Health - attackDamage;
                 Destroy(gameObject);
-                Debug.Log(attackMovement.Health);
+                Debug.Log(MeleeAttack.Health);
             }
             else
             {
