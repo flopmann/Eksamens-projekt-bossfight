@@ -29,11 +29,11 @@ public class Puzzle : MonoBehaviour
     public GameObject BossSymbol2;
     public GameObject BossSymbol3;
     public GameObject BossSymbol4;
-    [Header("active boss symbol")]
-    public GameObject Ring1;
-    public GameObject Ring2;
-    public GameObject Ring3;
-    public GameObject Ring4;
+    [Header("Dead stage symbol")]
+    public GameObject Dead1;
+    public GameObject Dead2;
+    public GameObject Dead3;
+    public GameObject Dead4;
 
 
 
@@ -75,6 +75,7 @@ public class Puzzle : MonoBehaviour
         {
             deActivateSymbol();
         }
+        killShield();
     }
     void chooseSymbol()
     {
@@ -162,6 +163,24 @@ public class Puzzle : MonoBehaviour
         }
     }
 
-    
+    void killShield()
+    {
+        if (Symbol1Health == 0)
+        {
+            Instantiate(Dead1, symbol1Stage.position, symbol1Stage.rotation);
+        }
+        if (Symbol2Health == 0)
+        {
+            Instantiate(Dead2, symbol2Stage.position, symbol2Stage.rotation);
+        }
+        if (Symbol3Health == 0)
+        {
+            Instantiate(Dead3, symbol3Stage.position, symbol3Stage.rotation);
+        }
+        if (Symbol4Health == 0)
+        {
+            Instantiate(Dead4, symbol4Stage.position, symbol4Stage.rotation);
+        }
+    }
 
 }
