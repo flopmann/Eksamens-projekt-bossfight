@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BossHealth : MonoBehaviour
 {
-    private float health = 2000f;
-    private float deathTimer = 5f;
+    private float health = 2000;
+    private float deathTimer = 5;
     public Animator animator;
 
     private bool dying;
@@ -33,8 +33,8 @@ public class BossHealth : MonoBehaviour
 
      void OnCollisionEnter(Collision col)
     {
-        
-        if (col.gameObject.tag == "bullet")
+        Debug.Log("collision");
+        if (col.gameObject.tag == "bullet" && BossAi.BossStage == 2)
         {
             health = health - 20;
             Debug.Log(health);

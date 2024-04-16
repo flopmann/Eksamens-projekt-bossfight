@@ -10,11 +10,11 @@ public class BossAi : MonoBehaviour
     private BossState Currentstate = BossState.Idle;
 
     public Transform Target;
-    public float meleeRange = 7;
+    public float meleeRange = 5;
     public float timeTillStart = 10f;
-    public float timeTillChase = 3f;
+    public float timeTillChase = 1;
     public Animator animator;
-    public float timeTillAttack = 1.5f;
+    public float timeTillAttack = 1f;
     public float rangedRange = 20f;
     public float timeTillRangedAttack = 4f;
 
@@ -45,7 +45,7 @@ public class BossAi : MonoBehaviour
         stage1 = true;
         rangedTargetSpawned = false;
         hasPicked = false;
-        
+        BossStage = 1;
     }
 
    
@@ -71,11 +71,13 @@ public class BossAi : MonoBehaviour
             timeTillSwitch -= Time.deltaTime;
             if (timeTillSwitch <= 0f)
             {
-                stage1 = false;
-                BossStage = 2;
+                stage1 = false;         
             }
         }
-        
+        if (stage1 == false)
+        {
+            BossStage = 2;
+        }
     }
 
     void idleState()
@@ -92,12 +94,12 @@ public class BossAi : MonoBehaviour
     {
         animator.SetBool("isIdle", false);
         animator.SetBool("isWalking", true);
-        animator.SetBool("isAttacking", false);
+        
         
         Debug.Log(Currentstate);
         GetComponent<AIMove>().moveAi();
-        timeTillChase = 10f;
-        timeTillAttack = 3f;
+        timeTillChase = 1f;
+        timeTillAttack = 1f;
 
          
 
@@ -143,27 +145,31 @@ public class BossAi : MonoBehaviour
     void meleeAttacking()
     {
         animator.SetBool("isWalking", false);
+        animator.SetBool("isAttacking", true);
         if ((Target.transform.position-transform.position).magnitude >= meleeRange) 
         {
+            
             timeTillChase -= Time.deltaTime;
             if(timeTillChase <= 0f)
             {
+                
                 if(stage1 == false)
                 {
                     meleeOrRanged = 0;
                     hasPicked = false;
                     Currentstate = BossState.Moving;
+                    animator.SetBool("isAttacking", false);
                 }
                 Currentstate = BossState.Moving;
-                
+                animator.SetBool("isAttacking", false);
             }
         }
         
         timeTillAttack -= Time.deltaTime;
         if (timeTillAttack <= 0)
         {
-            timeTillAttack = 5f;
-            animator.SetBool("isAttacking", true);
+            timeTillAttack = 1f;
+            
 
         }
        

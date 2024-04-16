@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8571177344620593417}
   - component: {fileID: 8903781230744679150}
   - component: {fileID: 667445779355865742}
+  - component: {fileID: -2226891429970486799}
   m_Layer: 0
   m_Name: Wave
   m_TagString: Untagged
@@ -92,13 +93,25 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4579454407841743219, guid: 544e354e7578f664ba48b0cba9e93733, type: 3}
+--- !u!114 &-2226891429970486799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4675064067137053478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc299c2840b5ec6468494ae6afda017f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2594021764303520636
 PrefabInstance:
   m_ObjectHideFlags: 0
