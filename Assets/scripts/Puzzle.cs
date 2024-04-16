@@ -76,6 +76,7 @@ public class Puzzle : MonoBehaviour
             deActivateSymbol();
         }
         killShield();
+        destroyRings();
     }
     void chooseSymbol()
     {
@@ -165,19 +166,19 @@ public class Puzzle : MonoBehaviour
 
     void killShield()
     {
-        if (Symbol1Health == 0)
+        if (Symbol1Health <= 0)
         {
             Instantiate(Dead1, symbol1Stage.position, symbol1Stage.rotation);
         }
-        if (Symbol2Health == 0)
+        if (Symbol2Health <= 0)
         {
             Instantiate(Dead2, symbol2Stage.position, symbol2Stage.rotation);
         }
-        if (Symbol3Health == 0)
+        if (Symbol3Health <= 0)
         {
             Instantiate(Dead3, symbol3Stage.position, symbol3Stage.rotation);
         }
-        if (Symbol4Health == 0)
+        if (Symbol4Health <= 0)
         {
             Instantiate(Dead4, symbol4Stage.position, symbol4Stage.rotation);
         }
