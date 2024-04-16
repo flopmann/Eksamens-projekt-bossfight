@@ -21,7 +21,7 @@ public class rangedMovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        transform.forward = Target;
+        
     }
 
     public void attackMove()
