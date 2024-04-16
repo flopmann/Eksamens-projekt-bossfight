@@ -16,7 +16,7 @@ public class BossAi : MonoBehaviour
     public Animator animator;
     public float timeTillAttack = 1.5f;
     public float rangedRange = 20f;
-    public float timeTillRangedAttack = 1.5f;
+    public float timeTillRangedAttack = 2f;
 
     public bool stage1;
     bool rangedTargetSpawned;
@@ -194,7 +194,7 @@ public class BossAi : MonoBehaviour
         if (rangedTargetSpawned == true)
         {
 
-            timeTillRangedAttack = 1.5f;
+            timeTillRangedAttack = 2f;
             rangedTargetSpawned = false;
             GetComponent<rangedAttack>().spawnHitBox();
             
