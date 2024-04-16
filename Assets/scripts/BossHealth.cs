@@ -21,6 +21,11 @@ public class BossHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health <= 0)
+        {
+            dying = true;
+        }
+
         if (dying == true)
         {
             deathTimer -= Time.deltaTime;
