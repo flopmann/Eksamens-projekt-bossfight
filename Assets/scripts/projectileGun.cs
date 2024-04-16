@@ -28,6 +28,8 @@ public class projectileGun : MonoBehaviour
 
     public Transform Player;
 
+    public AudioSource shootingAudio;
+
     private void Awake()
     {
         bulletsLeft = magazineSize;
@@ -65,6 +67,9 @@ public class projectileGun : MonoBehaviour
     {
         readyToShoot = false;
 
+        shootingAudio.enabled = true;
+        shootingAudio.pitch = Random.Range(0.95f, 1f);
+
         Ray ray = fpsCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
 
@@ -101,6 +106,7 @@ public class projectileGun : MonoBehaviour
     {
         readyToShoot = true;
         allowInvoke = true;
+        shootingAudio.enabled = false;
 
     }
 

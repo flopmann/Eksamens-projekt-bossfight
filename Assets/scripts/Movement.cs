@@ -83,6 +83,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.S)|| Input.GetKey(KeyCode.D))
         {
             footstepAudio.enabled = true;
+            footstepAudio.pitch = Random.Range(0.9f, 1f);
         }
         else
         {
@@ -99,9 +100,10 @@ public class Movement : MonoBehaviour
             
         }
 
-        if (Input.GetKey(sprintKey))
+        if (Input.GetKey(sprintKey) && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
         {
             sprint = true;
+            footstepAudio.enabled = false;
             sprintAudio.enabled = true;
         }
         else
