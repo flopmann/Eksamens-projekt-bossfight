@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossHealth : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class BossHealth : MonoBehaviour
         if (deathTimer <= 0f)
         {
             Destroy(gameObject);
+            SceneManager.LoadScene("WinScene");
         }
     }
 
