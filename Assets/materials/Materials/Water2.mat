@@ -38,7 +38,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _EmissionStrength: 0.51
+    - _EmissionStrength: 0.22
     - _FlowSpeed: 0.19
     - _FoamDensity: 0.74
     - _Opacity: 1
