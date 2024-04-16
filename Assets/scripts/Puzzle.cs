@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class Puzzle : MonoBehaviour
 {
-    [Header("Symbol Boss")]
-    public Transform symbol1Boss;
-    public Transform symbol2Boss;
-    public Transform symbol3Boss;  
-    public Transform symbol4Boss;
+    
     [Header("Symbol Stage")]
     public Transform symbol1Stage;
     public Transform symbol2Stage;
@@ -34,154 +30,186 @@ public class Puzzle : MonoBehaviour
     public GameObject Dead2;
     public GameObject Dead3;
     public GameObject Dead4;
+    [Header("non active stage Symbol")]
+    public GameObject Stage1;
+    public GameObject Stage2;
+    public GameObject Stage3;
+    public GameObject Stage4;
 
-
-
-    private GameObject currentSymbolBoss;  
+   
     private GameObject currentSymbolStage;
 
-    public static int currentSymbol;
+    public static int currentSymbol = 4;
 
     bool activeSymbol;
 
-    private float timeTillNewSymbol = 10f;
-
-
-
+    //private float timeTillNewSymbol;
     void Start()
     {
-        timeTillNewSymbol = 0f;
+        //timeTillNewSymbol = 0f;
+        activeSymbol = true;
     }
 
     
     void Update()
     {
-        if (timeTillNewSymbol <= 0f)
-        {
-            chooseSymbol();
-            activeSymbol = true;
-            timeTillNewSymbol = 20f;  
-        }
+       // if (timeTillNewSymbol <= 0f)
+        //{
+          //  ChooseSymbol();
+            //activeSymbol = true;
+            //timeTillNewSymbol = 10f;  
+        //}
         if (activeSymbol == true)
         {
-            activateSymbol();
+            ActivateSymbol();
             activeSymbol = false;
         }
-        if (activeSymbol == false)
+        //if (activeSymbol == false)
+        //{
+         //   timeTillNewSymbol -= Time.deltaTime;
+       // }
+        //if (timeTillNewSymbol <= 1f)
+        //{
+         //   DeActivateSymbol();
+       // }
+        KillShield();
+        DestroyRings();
+        if (currentSymbol == 1 && Symbol1Health <= 0)
         {
-            timeTillNewSymbol -= Time.deltaTime;
+            DeActivateSymbol();
+            //timeTillNewSymbol = 0;
+            currentSymbol = currentSymbol - 1;
+            activeSymbol = true;
+            Instantiate(Dead1, symbol1Stage.position, symbol1Stage.rotation);
         }
-        if (timeTillNewSymbol <= 1f)
+        if (currentSymbol == 2 && Symbol2Health <= 0)
         {
-            deActivateSymbol();
+            DeActivateSymbol();
+            //timeTillNewSymbol = 0;
+            currentSymbol = currentSymbol - 1;
+            activeSymbol = true;
+            Instantiate(Dead2, symbol2Stage.position, symbol2Stage.rotation);
         }
-        killShield();
-        destroyRings();
+        if (currentSymbol == 3 && Symbol3Health <= 0)
+        {
+            DeActivateSymbol();
+            //timeTillNewSymbol = 0;
+            currentSymbol = currentSymbol - 1;
+            activeSymbol = true;
+            Instantiate(Dead3, symbol3Stage.position, symbol3Stage.rotation);
+        }
+        if (currentSymbol == 4 && Symbol4Health <= 0)
+        {
+            DeActivateSymbol();
+            //timeTillNewSymbol = 0;
+            currentSymbol = currentSymbol - 1;
+            activeSymbol = true;
+            Instantiate(Dead4, symbol4Stage.position, symbol4Stage.rotation);   
+        }
     }
-    void chooseSymbol()
+    void ChooseSymbol()
     {
-        currentSymbol = UnityEngine.Random.Range(1, 5);
+        //currentSymbol = UnityEngine.Random.Range(1, 5);
         Debug.Log(currentSymbol);
     }
 
-    void activateSymbol()
+    void ActivateSymbol()
     {
         if (currentSymbol == 1)
         {
             if (Symbol1Health <= 400)
             {
-                
                 currentSymbolStage = Instantiate(Symbol1, symbol1Stage.position, symbol1Stage.rotation);
             }
             if (Symbol1Health <= 0)
             {
-                activeSymbol = false;
+              //  timeTillNewSymbol = 0;
             }
         }
         if (currentSymbol == 2)
         {
             if (Symbol2Health <= 400)
             {
-                
                 currentSymbolStage = Instantiate(Symbol2, symbol2Stage.position, symbol2Stage.rotation);
             }
             if (Symbol2Health <= 0)
             {
-                activeSymbol = false;
+            //    timeTillNewSymbol = 0;
             }
         }
         if (currentSymbol == 3)
         {
             if (Symbol3Health <= 400)
             {
-                
                 currentSymbolStage = Instantiate(Symbol3, symbol3Stage.position, symbol3Stage.rotation);
             }
+            
+
             if (Symbol3Health <= 0)
             {
-                activeSymbol = false;
+               // timeTillNewSymbol = 0;
             }
         }
         if (currentSymbol == 4)
         {
-            if (Symbol4Health <= 400)
+           if (Symbol4Health <= 400)
             {
-                
                 currentSymbolStage = Instantiate(Symbol4, symbol4Stage.position, symbol4Stage.rotation);
             }
             if (Symbol4Health <= 0)
-            {
-                activeSymbol = false;
+            {    
+             // timeTillNewSymbol = 0;              
             }
         }
-
     }
-    void deActivateSymbol()
-    {
-        
-        Destroy(currentSymbolBoss);
+    void DeActivateSymbol()
+    {    
         Destroy(currentSymbolStage);
-
     }
 
-    void destroyRings()
+    void DestroyRings()
     {
-        if (Symbol1Health == 0)
+        if (Symbol1Health <= 0)
         {
             Destroy(BossSymbol1);
         }
-        if (Symbol2Health == 0)
+        if (Symbol2Health <= 0)
         {
             Destroy(BossSymbol2);
         }
-        if (Symbol3Health == 0)
+        if (Symbol3Health <= 0)
         {
             Destroy(BossSymbol3);
         }
-        if (Symbol4Health == 0)
+        if (Symbol4Health <= 0)
         {
             Destroy(BossSymbol4);
         }
     }
 
-    void killShield()
+    void KillShield()
     {
         if (Symbol1Health <= 0)
         {
-            Instantiate(Dead1, symbol1Stage.position, symbol1Stage.rotation);
+            
+            Destroy(Stage1);
         }
         if (Symbol2Health <= 0)
         {
-            Instantiate(Dead2, symbol2Stage.position, symbol2Stage.rotation);
+            
+            Destroy(Stage2);
         }
         if (Symbol3Health <= 0)
         {
-            Instantiate(Dead3, symbol3Stage.position, symbol3Stage.rotation);
+            
+            Destroy(Stage3);
         }
         if (Symbol4Health <= 0)
         {
-            Instantiate(Dead4, symbol4Stage.position, symbol4Stage.rotation);
+            
+            Destroy(Stage4);
         }
     }
+
 
 }
