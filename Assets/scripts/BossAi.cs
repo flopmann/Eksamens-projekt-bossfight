@@ -16,7 +16,7 @@ public class BossAi : MonoBehaviour
     public Animator animator;
     public float timeTillAttack = 1.5f;
     public float rangedRange = 20f;
-    public float timeTillRangedAttack = 2f;
+    public float timeTillRangedAttack = 4f;
 
     public bool stage1;
     bool rangedTargetSpawned;
@@ -42,10 +42,10 @@ public class BossAi : MonoBehaviour
     {
         Currentstate = BossState.Idle;
         animator = GetComponent<Animator>();
-        stage1 = false;
+        stage1 = true;
         rangedTargetSpawned = false;
         hasPicked = false;
-        BossStage = 2;
+        
     }
 
    
@@ -104,10 +104,10 @@ public class BossAi : MonoBehaviour
         {
             if (hasPicked == false)
             {
-                //meleeOrRanged = UnityEngine.Random.Range(1, 3);
+                meleeOrRanged = UnityEngine.Random.Range(1, 3);
                 Debug.Log(meleeOrRanged);
                 hasPicked = true;
-                meleeOrRanged = 1;
+                
                 
             }
             if (meleeOrRanged == 1)
@@ -165,11 +165,7 @@ public class BossAi : MonoBehaviour
             animator.SetBool("isAttacking", true);
 
         }
-        if (timeTillAttack <= 4)
-        {
-            animator.SetBool("isIdle", true);
-        }
-        
+       
         hasPicked = false;
     }
     void rangedAttacking()
@@ -190,18 +186,22 @@ public class BossAi : MonoBehaviour
             GetComponent<rangedAttack>().spawnTarget();
             rangedTargetSpawned = true;
             animator.SetBool("isThrowing", true);
+            StartCoroutine(SpawnProjectile());
         }
         if (rangedTargetSpawned == true)
         {
 
-            timeTillRangedAttack = 2f;
+            timeTillRangedAttack = 4f;
             rangedTargetSpawned = false;
-            GetComponent<rangedAttack>().spawnHitBox();
-            
-
         }
         hasPicked = false;
     }
 
+    IEnumerator SpawnProjectile()
+    {
+        yield return new WaitForSeconds(0.12f);
+        // spawn projectile
+        GetComponent<rangedAttack>().spawnHitBox();
+    }
     
 }
