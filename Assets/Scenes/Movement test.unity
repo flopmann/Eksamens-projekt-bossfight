@@ -437,6 +437,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   orientation: {fileID: 1407208093}
+  Camera: {fileID: 0}
+  footstepAudio: {fileID: 0}
+  sprintAudio: {fileID: 0}
 --- !u!136 &297381397
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -539,6 +542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 352540607}
   - component: {fileID: 352540606}
+  - component: {fileID: 352540608}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -623,6 +627,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &352540608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352540605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &357771412
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,6 +712,8 @@ MonoBehaviour:
   allowInvoke: 1
   muzzleFlash: {fileID: 0}
   ammunitionDisplay: {fileID: 1215384918}
+  Player: {fileID: 0}
+  shootingAudio: {fileID: 0}
 --- !u!65 &357771415
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -887,6 +916,8 @@ MonoBehaviour:
   allowInvoke: 1
   muzzleFlash: {fileID: 0}
   ammunitionDisplay: {fileID: 1215384918}
+  Player: {fileID: 0}
+  shootingAudio: {fileID: 0}
 --- !u!65 &413387295
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1019,7 +1050,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 948bd5aa80aff4acfa6b79d22a854c2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2621,6 +2652,8 @@ MonoBehaviour:
   allowInvoke: 1
   muzzleFlash: {fileID: 0}
   ammunitionDisplay: {fileID: 1215384918}
+  Player: {fileID: 0}
+  shootingAudio: {fileID: 0}
 --- !u!23 &1777299399
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2891,6 +2924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1872407498}
   - component: {fileID: 1872407497}
+  - component: {fileID: 1872407499}
   m_Layer: 0
   m_Name: Directional Light (1)
   m_TagString: Untagged
@@ -2975,6 +3009,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1872407499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872407496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1956497760
 GameObject:
   m_ObjectHideFlags: 0
