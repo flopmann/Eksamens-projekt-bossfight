@@ -105,6 +105,8 @@ public class Movement : MonoBehaviour
             sprint = true;
             footstepAudio.enabled = false;
             sprintAudio.enabled = true;
+            sprintAudio.pitch = Random.Range(0.9f, 1f);
+
         }
         else
         {
