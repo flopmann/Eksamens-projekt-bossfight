@@ -66,7 +66,7 @@ public class BossAi : MonoBehaviour
                  rangedAttacking();
                  break;
         }
-        if (Puzzle.Symbol1Health == 0 && Puzzle.Symbol1Health == 0 && Puzzle.Symbol3Health == 0 && Puzzle.Symbol4Health == 0)
+        if (Puzzle.Symbol1Health <= 0 && Puzzle.Symbol1Health <= 0 && Puzzle.Symbol3Health <= 0 && Puzzle.Symbol4Health <= 0)
         {
             timeTillSwitch -= Time.deltaTime;
             if (timeTillSwitch <= 0f)
@@ -92,6 +92,7 @@ public class BossAi : MonoBehaviour
     {
         animator.SetBool("isIdle", false);
         animator.SetBool("isWalking", true);
+        animator.SetBool("isAttacking", false);
         
         Debug.Log(Currentstate);
         GetComponent<AIMove>().moveAi();
