@@ -81,6 +81,7 @@ public class Puzzle : MonoBehaviour
             currentSymbol = currentSymbol - 1;
             activeSymbol = true;
             Instantiate(Dead1, symbol1Stage.position, symbol1Stage.rotation);
+            Destroy(Stage1);
         }
         if (currentSymbol == 2 && Symbol2Health <= 0)
         {
@@ -89,6 +90,7 @@ public class Puzzle : MonoBehaviour
             currentSymbol = currentSymbol - 1;
             activeSymbol = true;
             Instantiate(Dead2, symbol2Stage.position, symbol2Stage.rotation);
+            Destroy(Stage2);
         }
         if (currentSymbol == 3 && Symbol3Health <= 0)
         {
@@ -97,6 +99,7 @@ public class Puzzle : MonoBehaviour
             currentSymbol = currentSymbol - 1;
             activeSymbol = true;
             Instantiate(Dead3, symbol3Stage.position, symbol3Stage.rotation);
+            Destroy(Stage3);
         }
         if (currentSymbol == 4 && Symbol4Health <= 0)
         {
@@ -104,7 +107,8 @@ public class Puzzle : MonoBehaviour
             //timeTillNewSymbol = 0;
             currentSymbol = currentSymbol - 1;
             activeSymbol = true;
-            Instantiate(Dead4, symbol4Stage.position, symbol4Stage.rotation);   
+            Instantiate(Dead4, symbol4Stage.position, symbol4Stage.rotation);
+            Destroy(Stage4);
         }
     }
     void ChooseSymbol()
@@ -192,22 +196,22 @@ public class Puzzle : MonoBehaviour
         if (Symbol1Health <= 0)
         {
             
-            Destroy(Stage1);
+            
         }
         if (Symbol2Health <= 0)
         {
             
-            Destroy(Stage2);
+            
         }
         if (Symbol3Health <= 0)
         {
             
-            Destroy(Stage3);
+            
         }
         if (Symbol4Health <= 0)
         {
             
-            Destroy(Stage4);
+            
         }
     }
 
