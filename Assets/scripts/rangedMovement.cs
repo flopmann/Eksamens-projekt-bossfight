@@ -11,7 +11,6 @@ public class rangedMovement : MonoBehaviour
     public int attackDamage = 30;
 
     private Vector3 Target;
-  
 
     
     void Update()
@@ -27,15 +26,16 @@ public class rangedMovement : MonoBehaviour
     public void attackMove()
     {
         Target = attackTarget.position;
+        transform.LookAt(Target);
 
         Vector3 newPosition = Vector3.MoveTowards(transform.position, Target, attackSpeed * Time.deltaTime);
         transform.position = newPosition;
 
     }
 
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter(Collider col)
     {
-        if (col.collider.tag == "Player")
+        if (col.gameObject.tag == "Player")
         {
             if (BossAi.BossStage != 2)
             {
