@@ -186,6 +186,7 @@ public class BossAi : MonoBehaviour
             meleeOrRanged = 0;
             hasPicked = false;
             Currentstate = BossState.Moving;
+            animator.SetBool("isWalking", true);
         }
 
         if(timeTillRangedAttack <= 0)
