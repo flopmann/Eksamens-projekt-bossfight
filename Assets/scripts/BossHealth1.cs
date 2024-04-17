@@ -15,6 +15,6 @@ public class BossHealthDisplay : MonoBehaviour
     
     void Update()
     {
-        BossHealthText.text ="Boss health" + BossHealth.health.ToString();
+        BossHealthText.text =  BossHealth.health.ToString();
     }
 }
