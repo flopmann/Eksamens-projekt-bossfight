@@ -20,7 +20,8 @@ public class BossAi : MonoBehaviour
 
     public bool stage1;
     bool rangedTargetSpawned;
-    
+
+    public AudioSource bosswalkAudio;
 
     private float timeTillSwitch = 5f;
 
@@ -57,8 +58,8 @@ public class BossAi : MonoBehaviour
                  idleState();
                 break;
             case BossState.Moving:
-                 moving(); 
-                 break;
+                 moving();
+                break;
             case BossState.Meleeattacking:
                  meleeAttacking();
                  break;
@@ -78,7 +79,16 @@ public class BossAi : MonoBehaviour
         {
             BossStage = 2;
         }
-        meleeOrRanged = 1;  
+        meleeOrRanged = 1;
+
+        if (Currentstate==BossState.Moving)
+        {
+            bosswalkAudio.enabled = true;
+        }
+        else
+        {
+            bosswalkAudio.enabled = false;
+        }
     }
 
     void idleState()
@@ -95,7 +105,7 @@ public class BossAi : MonoBehaviour
     {
         animator.SetBool("isIdle", false);
         animator.SetBool("isWalking", true);
-        
+
         
         //Debug.Log(Currentstate);
         GetComponent<AIMove>().moveAi();
@@ -145,6 +155,9 @@ public class BossAi : MonoBehaviour
     {
         animator.SetBool("isWalking", false);
         animator.SetBool("isAttacking", true);
+
+       
+
         if ((Target.transform.position-transform.position).magnitude >= meleeRange) 
         {
             
