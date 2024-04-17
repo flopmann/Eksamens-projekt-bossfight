@@ -21,15 +21,18 @@ public class WaterMovement : MonoBehaviour
 
     void Update()
     {
-        moveWater();
-        Drowning();
-        if (transform.position.y < PlayerHead.position.y)
+        if (BossHealth.health <= 0)
         {
-            air = 100;
-        }
-        if (MeleeAttack.Health <= 0)
-        {
-            SceneManager.LoadScene("loseScene");
+            moveWater();
+            Drowning();
+            if (transform.position.y < PlayerHead.position.y)
+            {
+                air = 100;
+            }
+            if (MeleeAttack.Health <= 0)
+            {
+                SceneManager.LoadScene("loseScene");
+            }
         }
         
     }

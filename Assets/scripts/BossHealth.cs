@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class BossHealth : MonoBehaviour
 {
-    private float health = 2000;
+    public static int health = 2000;
     private float deathTimer = 5;
     public Animator animator;
 
