@@ -25,7 +25,7 @@ public class BossHealth : MonoBehaviour
         if (health <= 0)
         {
             dying = true;
-            SceneManager.LoadScene("WinScene");
+            
         }
 
         if (dying == true)
