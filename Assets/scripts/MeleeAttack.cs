@@ -17,7 +17,7 @@ public class MeleeAttack : MonoBehaviour
     }
     void Update()
     {
-            if (Health <= 0)
+        if (Health <= 0)
         {
             SceneManager.LoadScene("LoseScene");
         }
