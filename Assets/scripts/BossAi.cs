@@ -78,7 +78,7 @@ public class BossAi : MonoBehaviour
         {
             BossStage = 2;
         }
-        meleeOrRanged = 1;
+        meleeOrRanged = 1;  
     }
 
     void idleState()
