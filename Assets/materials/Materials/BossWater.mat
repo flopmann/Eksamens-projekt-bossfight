@@ -110,15 +110,16 @@ Material:
     - _EmissionDimming: 0
     - _EmissionStrength: 0.2
     - _EnvironmentReflections: 1
-    - _FlowSpeed: 0.26
-    - _FoamDensity: 1.93
+    - _FlowSpeed: 1.01
+    - _FoamDensity: 1.91
     - _FoamSpeed: 1.92
-    - _FoamThickness: 2.66
+    - _FoamThickness: 1.87
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
+    - _Opacity: 0.75
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -136,7 +137,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FlowDirection: {r: 3.02, g: 1.17, b: 0, a: 0}
+    - _FlowDirection: {r: 0, g: -1, b: 0, a: 0}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _WaterColor: {r: 0, g: 0.47091198, b: 1, a: 1}
