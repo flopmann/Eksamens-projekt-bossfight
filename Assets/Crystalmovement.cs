@@ -19,7 +19,7 @@ public class Crystalmovement : MonoBehaviour
     void Update()
     {
         
-        if (TrapTriggered == 2) 
+        if (TrapTriggered == 2 && BossHealth.health >= 0) 
         {
             Vector3 newPosition = Vector3.MoveTowards(transform.position, Target1.position, speed * Time.deltaTime);
 
