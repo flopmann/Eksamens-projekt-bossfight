@@ -21,7 +21,7 @@ public class WaterMovement : MonoBehaviour
 
     void Update()
     {
-        if (BossHealth.health <= 0)
+        if (BossHealth.health <= 0 && GetComponent<CrystalPickup>().CrystalPickedUp == true)
         {
             moveWater();
             Drowning();

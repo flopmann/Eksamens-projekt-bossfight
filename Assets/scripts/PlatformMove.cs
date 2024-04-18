@@ -12,7 +12,7 @@ public class PlatformMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (BossHealth.health <= 0)
+        if (BossHealth.health <= 0 && GetComponent<CrystalPickup>().CrystalPickedUp == true)
         {
             movePlatform();
         }
