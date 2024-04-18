@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Phase3 test.unity
     guid: 3844d19395dd7d84f8fb95b5c8b33499
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 8b3842d99f6a4b84b9b8106178c24a2e
   m_configObjects: {}
