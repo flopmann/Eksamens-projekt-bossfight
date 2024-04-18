@@ -15,7 +15,7 @@ public class CrystalPickup : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider col)
+    void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == "Player" && BossHealth.health <= 0) 
         {

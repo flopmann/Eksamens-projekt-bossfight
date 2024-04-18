@@ -11,7 +11,7 @@ public class BossAi : MonoBehaviour
 
     public Transform Target;
     public float meleeRange = 5;
-    public float timeTillStart = 5f;
+    public float timeTillStart = 1f;
     public float timeTillChase = 1;
     public Animator animator;
     public float timeTillAttack = 1f;
@@ -94,7 +94,7 @@ public class BossAi : MonoBehaviour
     void idleState()
     {
         animator.SetBool("isIdle", true);
-        if (GetComponent<Crystalmovement>().TrapTriggered == true)
+        if (Crystalmovement.TrapTriggered == 2)
         {
             timeTillStart -= Time.deltaTime;
             if (timeTillStart <= 0f)

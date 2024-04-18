@@ -9,11 +9,11 @@ public class Crystalmovement : MonoBehaviour
 
     public float speed;
 
-    public bool TrapTriggered;
+    public static int TrapTriggered;
 
     void Start()
     {
-        TrapTriggered = false;
+        TrapTriggered = 1;
     }
     
     void Update()
@@ -24,17 +24,23 @@ public class Crystalmovement : MonoBehaviour
 
             transform.position = newPosition;
         }
-    }
-
-    private void OnTriggerEnter(Collider col)
-    {
-        if (col.gameObject.tag == "Player")
+        if (TrapTriggered == 2) 
         {
             Vector3 newPosition = Vector3.MoveTowards(transform.position, Target1.position, speed * Time.deltaTime);
 
             transform.position = newPosition;
 
-            TrapTriggered = true;
+        }
+
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            TrapTriggered = 2;
+
+            Debug.Log(TrapTriggered);
 
         }
         
