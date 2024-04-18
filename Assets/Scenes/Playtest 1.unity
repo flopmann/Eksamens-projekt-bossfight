@@ -2083,6 +2083,9 @@ PrefabInstance:
       addedObject: {fileID: 164899740}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e525c89a117a2074aa064d603497323b, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 164899742}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e525c89a117a2074aa064d603497323b, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 164899739}
   m_SourcePrefab: {fileID: 100100000, guid: e525c89a117a2074aa064d603497323b, type: 3}
 --- !u!1 &164899737 stripped
@@ -2133,6 +2136,20 @@ MonoBehaviour:
   Target1: {fileID: 43504282}
   Target2: {fileID: 1573554719}
   speed: 3
+--- !u!114 &164899742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164899737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f317fab32ae74f41894ca5c76f96054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Crystal: {fileID: 1377722006}
+  CrystalPickedUp: 0
 --- !u!1001 &165196557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19815,13 +19832,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 46a8abba11bbefc4cb1f5ea34932395f, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1377722008}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 46a8abba11bbefc4cb1f5ea34932395f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1377722007}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46a8abba11bbefc4cb1f5ea34932395f, type: 3}
 --- !u!4 &1377722005 stripped
 Transform:
@@ -19833,42 +19844,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 46a8abba11bbefc4cb1f5ea34932395f, type: 3}
   m_PrefabInstance: {fileID: 1377722004}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &1377722007
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377722006}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 8
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 3.9672909
-  m_Height: 8.595499
-  m_Direction: 1
-  m_Center: {x: 0.1323088, y: -2.2230768, z: -0.19055933}
---- !u!114 &1377722008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377722006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f317fab32ae74f41894ca5c76f96054, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrystalPickedUp: 0
 --- !u!1 &1387067832 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3756473180518285571, guid: 0082ac2984991544c91f313e51e96bfc, type: 3}
@@ -22412,7 +22387,7 @@ Transform:
   m_GameObject: {fileID: 1573554718}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.46966, y: -5.0876055, z: 3.872652}
+  m_LocalPosition: {x: 0, y: 1.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

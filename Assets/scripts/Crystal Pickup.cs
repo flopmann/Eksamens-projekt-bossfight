@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CrystalPickup : MonoBehaviour
 {
+    public GameObject Crystal;
     public bool CrystalPickedUp;
     void Start()
     {
@@ -15,12 +16,13 @@ public class CrystalPickup : MonoBehaviour
     {
         
     }
-    void OnCollisionEnter(Collision col)
+    private void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == "Player" && BossHealth.health <= 0) 
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             CrystalPickedUp = true;
+            Destroy(Crystal);
         }
     }
 }
