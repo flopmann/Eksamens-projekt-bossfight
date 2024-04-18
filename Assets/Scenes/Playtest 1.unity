@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2083,6 +2083,9 @@ PrefabInstance:
       addedObject: {fileID: 164899740}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e525c89a117a2074aa064d603497323b, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 164899743}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e525c89a117a2074aa064d603497323b, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 164899742}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e525c89a117a2074aa064d603497323b, type: 3}
       insertIndex: -1
@@ -2134,7 +2137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target1: {fileID: 43504282}
-  Target2: {fileID: 1573554719}
   speed: 3
 --- !u!114 &164899742
 MonoBehaviour:
@@ -2149,7 +2151,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Crystal: {fileID: 1377722006}
-  CrystalPickedUp: 0
+--- !u!114 &164899743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164899737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3cc5b303924e6408af5a462985bafa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 1573554719}
+  speed: 3
 --- !u!1001 &165196557
 PrefabInstance:
   m_ObjectHideFlags: 0

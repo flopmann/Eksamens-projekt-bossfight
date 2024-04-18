@@ -5,7 +5,7 @@ using UnityEngine;
 public class Crystalmovement : MonoBehaviour
 {
     public Transform Target1;
-    public Transform Target2;
+    
 
     public float speed;
 
@@ -18,12 +18,7 @@ public class Crystalmovement : MonoBehaviour
     
     void Update()
     {
-        if (BossHealth.health <= 0)
-        {
-            Vector3 newPosition = Vector3.MoveTowards(transform.position, Target2.position, speed * Time.deltaTime);
-
-            transform.position = newPosition;
-        }
+        
         if (TrapTriggered == 2) 
         {
             Vector3 newPosition = Vector3.MoveTowards(transform.position, Target1.position, speed * Time.deltaTime);
