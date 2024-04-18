@@ -5,10 +5,10 @@ using UnityEngine;
 public class CrystalPickup : MonoBehaviour
 {
     public GameObject Crystal;
-    public bool CrystalPickedUp;
+    public static int CrystalPickedUp;
     void Start()
     {
-        CrystalPickedUp = false;
+        CrystalPickedUp = 1;
     }
 
     // Update is called once per frame
@@ -20,8 +20,7 @@ public class CrystalPickup : MonoBehaviour
     {
         if (col.gameObject.tag == "Player" && BossHealth.health <= 0) 
         {
-            //Destroy(gameObject);
-            CrystalPickedUp = true;
+            CrystalPickedUp = 2;
             Destroy(Crystal);
         }
     }

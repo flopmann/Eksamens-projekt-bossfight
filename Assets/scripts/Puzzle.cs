@@ -43,79 +43,62 @@ public class Puzzle : MonoBehaviour
 
     bool activeSymbol;
 
-    //private float timeTillNewSymbol;
+    
     void Start()
     {
-        //timeTillNewSymbol = 0f;
+        
         activeSymbol = true;
     }
 
     
     void Update()
     {
-       // if (timeTillNewSymbol <= 0f)
-        //{
-          //  ChooseSymbol();
-            //activeSymbol = true;
-            //timeTillNewSymbol = 10f;  
-        //}
-        if (activeSymbol == true)
+       
+        if (Crystalmovement.TrapTriggered == 2)
         {
-            ActivateSymbol();
-            activeSymbol = false;
-        }
-        //if (activeSymbol == false)
-        //{
-         //   timeTillNewSymbol -= Time.deltaTime;
-       // }
-        //if (timeTillNewSymbol <= 1f)
-        //{
-         //   DeActivateSymbol();
-       // }
-        KillShield();
-        DestroyRings();
-        if (currentSymbol == 1 && Symbol1Health <= 0)
-        {
-            DeActivateSymbol();
-            //timeTillNewSymbol = 0;
-            currentSymbol = currentSymbol - 1;
-            activeSymbol = true;
-            Instantiate(Dead1, symbol1Stage.position, symbol1Stage.rotation);
-            Destroy(Stage1);
-        }
-        if (currentSymbol == 2 && Symbol2Health <= 0)
-        {
-            DeActivateSymbol();
-            //timeTillNewSymbol = 0;
-            currentSymbol = currentSymbol - 1;
-            activeSymbol = true;
-            Instantiate(Dead2, symbol2Stage.position, symbol2Stage.rotation);
-            Destroy(Stage2);
-        }
-        if (currentSymbol == 3 && Symbol3Health <= 0)
-        {
-            DeActivateSymbol();
-            //timeTillNewSymbol = 0;
-            currentSymbol = currentSymbol - 1;
-            activeSymbol = true;
-            Instantiate(Dead3, symbol3Stage.position, symbol3Stage.rotation);
-            Destroy(Stage3);
-        }
-        if (currentSymbol == 4 && Symbol4Health <= 0)
-        {
-            DeActivateSymbol();
-            //timeTillNewSymbol = 0;
-            currentSymbol = currentSymbol - 1;
-            activeSymbol = true;
-            Instantiate(Dead4, symbol4Stage.position, symbol4Stage.rotation);
-            Destroy(Stage4);
+            if (activeSymbol == true)
+            {
+                ActivateSymbol();
+                activeSymbol = false;
+            }
+
+            KillShield();
+            DestroyRings();
+            if (currentSymbol == 1 && Symbol1Health <= 0)
+            {
+                DeActivateSymbol();
+                currentSymbol = currentSymbol - 1;
+                activeSymbol = true;
+                Instantiate(Dead1, symbol1Stage.position, symbol1Stage.rotation);
+                Destroy(Stage1);
+            }
+            if (currentSymbol == 2 && Symbol2Health <= 0)
+            {
+                DeActivateSymbol();
+                currentSymbol = currentSymbol - 1;
+                activeSymbol = true;
+                Instantiate(Dead2, symbol2Stage.position, symbol2Stage.rotation);
+                Destroy(Stage2);
+            }
+            if (currentSymbol == 3 && Symbol3Health <= 0)
+            {
+                DeActivateSymbol();
+                currentSymbol = currentSymbol - 1;
+                activeSymbol = true;
+                Instantiate(Dead3, symbol3Stage.position, symbol3Stage.rotation);
+                Destroy(Stage3);
+            }
+            if (currentSymbol == 4 && Symbol4Health <= 0)
+            {
+                DeActivateSymbol();
+                currentSymbol = currentSymbol - 1;
+                activeSymbol = true;
+                Instantiate(Dead4, symbol4Stage.position, symbol4Stage.rotation);
+                Destroy(Stage4);
+            }
         }
     }
-    void ChooseSymbol()
-    {
-        //currentSymbol = UnityEngine.Random.Range(1, 5);
-        Debug.Log(currentSymbol);
-    }
+  
 
     void ActivateSymbol()
     {
@@ -125,10 +108,7 @@ public class Puzzle : MonoBehaviour
             {
                 currentSymbolStage = Instantiate(Symbol1, symbol1Stage.position, symbol1Stage.rotation);
             }
-            if (Symbol1Health <= 0)
-            {
-              //  timeTillNewSymbol = 0;
-            }
+            
         }
         if (currentSymbol == 2)
         {
@@ -136,10 +116,7 @@ public class Puzzle : MonoBehaviour
             {
                 currentSymbolStage = Instantiate(Symbol2, symbol2Stage.position, symbol2Stage.rotation);
             }
-            if (Symbol2Health <= 0)
-            {
-            //    timeTillNewSymbol = 0;
-            }
+           
         }
         if (currentSymbol == 3)
         {
@@ -149,10 +126,7 @@ public class Puzzle : MonoBehaviour
             }
             
 
-            if (Symbol3Health <= 0)
-            {
-               // timeTillNewSymbol = 0;
-            }
+            
         }
         if (currentSymbol == 4)
         {
@@ -160,10 +134,7 @@ public class Puzzle : MonoBehaviour
             {
                 currentSymbolStage = Instantiate(Symbol4, symbol4Stage.position, symbol4Stage.rotation);
             }
-            if (Symbol4Health <= 0)
-            {    
-             // timeTillNewSymbol = 0;              
-            }
+            
         }
     }
     void DeActivateSymbol()
