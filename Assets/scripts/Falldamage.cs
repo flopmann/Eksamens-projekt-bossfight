@@ -21,7 +21,7 @@ public class Falldamage : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("loseScene");
+            SceneManager.LoadScene("DeathMenu");
         }
     }
 
