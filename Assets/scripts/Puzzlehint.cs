@@ -27,7 +27,7 @@ public class Puzzlehint : MonoBehaviour
         {
             hintText.text = "";
         }
-        if (BossHealth.health <= 0)
+        if (BossHealth.Dead == 2)
         {
             hintText.text = "Steal the crystal";
         }

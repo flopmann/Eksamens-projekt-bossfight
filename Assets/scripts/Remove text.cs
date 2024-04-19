@@ -13,7 +13,7 @@ public class Removetext : MonoBehaviour
     
     void Update()
     {
-        if (BossHealth.health <= 0)
+        if (BossHealth.Dead == 2)
         {
             Destroy(gameObject);
         }

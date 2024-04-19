@@ -17,7 +17,7 @@ public class CrystalMoveback : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (BossHealth.health <= 0)
+        if (BossHealth.Dead == 2)
         {
             Vector3 newPosition = Vector3.MoveTowards(transform.position, Target.position, speed * Time.deltaTime);
 

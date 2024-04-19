@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 public class BossHealth : MonoBehaviour
 {
     public static int health = 2000;
-    
-    
 
 
+
+    public static int Dead;
 
     void Start()
     {
-        
+        Dead = 1;
         
     }
 
@@ -22,6 +22,7 @@ public class BossHealth : MonoBehaviour
     {
         if (health <= 0)
         {
+            Dead=2;
             Destroy(gameObject);
 
         }
