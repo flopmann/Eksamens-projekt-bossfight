@@ -6,17 +6,15 @@ using UnityEngine.SceneManagement;
 public class BossHealth : MonoBehaviour
 {
     public static int health = 2000;
-    private float deathTimer = 5;
-    public Animator animator;
-
-    private bool dying;
+    
+    
 
 
 
     void Start()
     {
-        animator = GetComponent<Animator>();
-        dying = false;
+        
+        
     }
 
     // Update is called once per frame
@@ -24,19 +22,11 @@ public class BossHealth : MonoBehaviour
     {
         if (health <= 0)
         {
-            dying = true;
-            
+            Destroy(gameObject);
+
         }
 
-        if (dying == true)
-        {
-            deathTimer -= Time.deltaTime;
-        }
-        if (deathTimer <= 0f)
-        {
-            Destroy(gameObject);
-            
-        }
+      
     }
 
      void OnCollisionEnter(Collision col)

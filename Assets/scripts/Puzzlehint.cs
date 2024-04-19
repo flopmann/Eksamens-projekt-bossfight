@@ -7,7 +7,7 @@ public class Puzzlehint : MonoBehaviour
 {
     [SerializeField]TextMeshProUGUI hintText;
 
-    private float timeTillGone;
+    
     void Start()
     {
         
@@ -15,11 +15,25 @@ public class Puzzlehint : MonoBehaviour
 
     void Update()
     {
-        timeTillGone += Time.deltaTime;
-        hintText.text = "Destroy the Shields";
-        if (timeTillGone >= 3)
+        if (Crystalmovement.TrapTriggered == 1)
+        {
+            hintText.text = "Steal the crystal";
+        }
+        if (Crystalmovement.TrapTriggered == 2)
+        {
+            hintText.text = "Destroy the Shields";
+        }
+        if (BossAi.BossStage == 2)
         {
             hintText.text = "";
+        }
+        if (BossHealth.health <= 0)
+        {
+            hintText.text = "Steal the crystal";
+        }
+        if (CrystalPickup.CrystalPickedUp == 2)
+        {
+            hintText.text = "Escape!";
         }
     }
 }

@@ -19,7 +19,7 @@ public class MeleeAttack : MonoBehaviour
     {
         if (Health <= 0)
         {
-            SceneManager.LoadScene("LoseScene");
+            SceneManager.LoadScene("DeathMenu");
         }
     }
 
