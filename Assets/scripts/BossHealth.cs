@@ -7,7 +7,7 @@ public class BossHealth : MonoBehaviour
 {
     public static int health = 2000;
 
-
+    private float timeTillDeath = 1;
 
     public static int Dead;
 
@@ -23,8 +23,12 @@ public class BossHealth : MonoBehaviour
         if (health <= 0)
         {
             Dead=2;
-            Destroy(gameObject);
-
+            
+            timeTillDeath -= Time.deltaTime;
+            if(timeTillDeath <= 0) 
+            {
+                Destroy(gameObject);
+            }
         }
 
       
