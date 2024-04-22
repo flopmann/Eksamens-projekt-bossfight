@@ -31,7 +31,7 @@ public class WaterMovement : MonoBehaviour
             }
             if (MeleeAttack.Health <= 0)
             {
-                SceneManager.LoadScene("loseScene");
+                SceneManager.LoadScene("DeathMenu");
             }
         }
         
