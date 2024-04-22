@@ -7,7 +7,7 @@ public class BossHealth : MonoBehaviour
 {
     public static int health = 2000;
 
-    private float timeTillDeath = 1;
+    private float timeTillDeath = 2;
 
     public static int Dead;
 
@@ -39,7 +39,7 @@ public class BossHealth : MonoBehaviour
         Debug.Log("collision");
         if (col.gameObject.tag == "bullet" && BossAi.BossStage == 2)
         {
-            health = health - 20;
+            health = health - 2000;
             Debug.Log(health);
         }
     }

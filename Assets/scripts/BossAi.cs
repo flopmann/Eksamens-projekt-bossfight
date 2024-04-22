@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 
@@ -175,14 +174,6 @@ public class BossAi : MonoBehaviour
                 Currentstate = BossState.Moving;
                 animator.SetBool("isAttacking", false);
             }
-        }
-        
-        timeTillAttack -= Time.deltaTime;
-        if (timeTillAttack <= 0)
-        {
-            timeTillAttack = 1f;
-            
-
         }
        
         hasPicked = false;
