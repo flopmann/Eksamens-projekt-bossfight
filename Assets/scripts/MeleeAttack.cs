@@ -13,7 +13,7 @@ public class MeleeAttack : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("???");
+        
     }
     void Update()
     {
