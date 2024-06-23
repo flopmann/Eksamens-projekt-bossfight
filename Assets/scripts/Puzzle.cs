@@ -62,7 +62,7 @@ public class Puzzle : MonoBehaviour
                 activeSymbol = false;
             }
 
-            KillShield();
+           
             DestroyRings();
             if (currentSymbol == 1 && Symbol1Health <= 0)
             {
@@ -162,29 +162,7 @@ public class Puzzle : MonoBehaviour
         }
     }
 
-    void KillShield()
-    {
-        if (Symbol1Health <= 0)
-        {
-            
-            
-        }
-        if (Symbol2Health <= 0)
-        {
-            
-            
-        }
-        if (Symbol3Health <= 0)
-        {
-            
-            
-        }
-        if (Symbol4Health <= 0)
-        {
-            
-            
-        }
-    }
+   
 
 
 }

@@ -25,6 +25,10 @@ public class Crystalmovement : MonoBehaviour
 
             transform.position = newPosition;
 
+            if(BossAi.BossStage == 2)
+            {
+                TrapTriggered = 1;
+            }
         }
 
     }

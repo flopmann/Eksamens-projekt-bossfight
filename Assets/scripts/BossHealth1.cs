@@ -18,9 +18,6 @@ public class BossHealthDisplay : MonoBehaviour
     void Update()
     {
         BossHealthText.text =  BossHealth.health.ToString();
-        if (BossHealth.health <= 0)
-        {
-            Destroy(BossHealthText);
-        }  
+         
     }
 }

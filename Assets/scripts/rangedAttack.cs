@@ -7,7 +7,7 @@ public class rangedAttack : MonoBehaviour
     public GameObject rangedHitBox;
     public GameObject Target;
     private GameObject currentTarget;
-    public Transform Boss;
+   
 
     public Transform attackPoint;
     public Transform attackTarget;

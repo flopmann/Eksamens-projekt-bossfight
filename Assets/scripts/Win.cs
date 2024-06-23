@@ -19,7 +19,7 @@ public class Win : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player" && CrystalPickup.CrystalPickedUp == 2)
         {
             SceneManager.LoadScene("WinMenu");
         }

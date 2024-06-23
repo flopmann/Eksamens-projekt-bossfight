@@ -19,6 +19,7 @@ public class CrystalMoveback : MonoBehaviour
     {
         if (BossHealth.Dead == 2)
         {
+            
             Vector3 newPosition = Vector3.MoveTowards(transform.position, Target.position, speed * Time.deltaTime);
 
             transform.position = newPosition;

@@ -39,7 +39,7 @@ public class BossHealth : MonoBehaviour
         Debug.Log("collision");
         if (col.gameObject.tag == "bullet" && BossAi.BossStage == 2)
         {
-            health = health - 20;
+            health = health - 200;
             Debug.Log(health);
         }
     }
